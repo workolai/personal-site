@@ -225,20 +225,49 @@ process_single_image() {
     rm -f "$input"
     rm -rf "$tmp_work_dir"
 
+    # --- Подготовка списков существующих файлов для умного srcset ---
+    local valid_avif=()
+    local valid_webp=()
+    for size in "${SIZES[@]}"; do
+        [ -f "$img_dir/${base}-${size}.avif" ] && valid_avif+=("$size")
+        [ -f "$img_dir/${base}-${size}.webp" ] && valid_webp+=("$size")
+    done
+
+    # Общая строка sizes для обоих тегов source
+    local sizes_attr="sizes=\"(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px\""
+
     # Генерируем HTML блок в лог
     log_output+="\n → HTML для вашего файла:\n"
     log_output+="   <picture>\n"
+
+    # Блок AVIF
     log_output+="     <source type=\"image/avif\" srcset=\"\n"
-    for size in "${SIZES[@]}"; do
-        [ -f "$img_dir/${base}-${size}.avif" ] && log_output+="       /img/${sub_dir}/${base}/${base}-${size}.avif ${size}w,\n"
+    local len_avif=${#valid_avif[@]}
+    for ((i=0; i<len_avif; i++)); do
+        local size=${valid_avif[i]}
+        if [ $i -eq $((len_avif - 1)) ]; then
+            # На последней итерации закрываем кавычку, переносим строку и пишем sizes
+            log_output+="       img/${sub_dir}/${base}/${base}-${size}.avif ${size}w\"\n     $sizes_attr>\n"
+        else
+            log_output+="       img/${sub_dir}/${base}/${base}-${size}.avif ${size}w,\n"
+        fi
     done
-    log_output+="     \" sizes=\"(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px\" />\n"
+
+    # Блок WebP
     log_output+="     <source type=\"image/webp\" srcset=\"\n"
-    for size in "${SIZES[@]}"; do
-        [ -f "$img_dir/${base}-${size}.webp" ] && log_output+="       /img/${sub_dir}/${base}/${base}-${size}.webp ${size}w,\n"
+    local len_webp=${#valid_webp[@]}
+    for ((i=0; i<len_webp; i++)); do
+        local size=${valid_webp[i]}
+        if [ $i -eq $((len_webp - 1)) ]; then
+            # На последней итерации закрываем кавычку, переносим строку и пишем sizes
+            log_output+="       img/${sub_dir}/${base}/${base}-${size}.webp ${size}w\"\n     $sizes_attr>\n"
+        else
+            log_output+="       img/${sub_dir}/${base}/${base}-${size}.webp ${size}w,\n"
+        fi
     done
-    log_output+="     \" sizes=\"(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px\" />\n"
-    log_output+="     <img src=\"/img/${sub_dir}/${base}/${base}-fallback.${fallback_ext}\" width=\"$fallback_w\" height=\"$fallback_h\" alt=\"Опиши картинку здесь\" loading=\"lazy\" />\n"
+
+    # Блок IMG фолбэка
+    log_output+="     <img src=\"img/${sub_dir}/${base}/${base}-fallback.${fallback_ext}\" width=\"$fallback_w\" height=\"$fallback_h\" alt=\"Опиши картинку здесь\" loading=\"lazy\">\n"
     log_output+="   </picture>\n"
 
     # Выплескиваем весь лог картинки атомарно, чтобы строки не перепутались

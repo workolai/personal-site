@@ -7,6 +7,7 @@ caption {
     border-collapse: collapse;
     padding: 0.5rem;
 }
+
 #site-title {
     font-size: 2rem;
 }
@@ -18,7 +19,7 @@ article p {
 }
 
 article section ul p {
-  text-indent: 0;
+    text-indent: 0;
 }
 
 .pub_date {
@@ -27,7 +28,6 @@ article section ul p {
 
 .dialogue {
     border: 2px solid #eee;
-    border-radius: 10px;
     text-indent: 0;
 }
 
@@ -43,15 +43,17 @@ header {
 }
 
 body {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 a {
     text-decoration: none;
     color: #0066cc;
     transition: color 0.2s ease;
 }
+
 a:hover {
-    color:#004499
+    color: #004499
 }
 
 figure {
@@ -61,7 +63,7 @@ figure {
 
 img {
     max-width: 100%;
-    height: auto; 
+    height: auto;
     display: block;
 }
 
