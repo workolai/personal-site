@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Николай Огрызков">
+    <meta name="description" content="История развития сайта Николая Огрызкова по дням ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css">
+    <title>Развитие сайта</title>
+</head>
+
+<body>
+    <header>
+        <p id="site-title">Личный и рабочий блог Николая Огрызкова</p>
+        <hr>
+        <nav class="header-urls">
+            <a href="index.html">Главная</a>
+            <a href="about.html">Обо мне</a>
+            <a href="history.html">Развитие сайта</a>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <details>
+            <summary>Навигация по странице</summary>
+            <nav aria-label="primary_navigation">
+                <ul>
+                    <li><a href="#why-created">Зачем была создана эта страничка??</a></li>
+                    <li>
+                        <a href="#learning-days">Обучение по дням?</a>
+                        <ul>
+                            <li><a href="#days_5to8L">Дни 5—8: внезапная оптимизация картинок, первые шажки в CSS и ИИ</a></li>
+                            <li><a href="#day_4L">День 4: таблицы и забота о здоровье</a></li>
+                            <li> <a href="#days-123L">Дни 1, 2 и 3: первые потуги</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#snapshot-days">Снапшоты сайта по дням</a></li>
+                </ul>
+            </nav>
+        </details>
+        <h1>Развитие сайта</h1>
+        <article id="why-created">
+            <h2>Зачем была создана эта страничка?</h2>
+            <p>Я думаю, всем нам иногда бывает интересно, как тот или иной человек развивался и как начинал путь. Когда объектом интереса стану я, мне бы хотелось, чтобы это было реализовано удобно для всех и с доступностью прямо с сайта.</p>
+            <p>Именно для этого и создан данный раздел на сайте. Вы можете, во-первых, по дням отследить, как и что я изучал, с самого первого дня развития в формате ленты. Во-вторых, вы можете посмотреть, как в тот или иной день выглядел сайт. На момент создания этой страницы он представлял из себя голый HTML-документ — однако кто знает, каким будет сайт в будущем? =)</p>
+        </article>
+
+        <section id="learning-days">
+            <h2>Обучение по дням</h2>
+            <article id="days_5to8L">
+                <h3>Дни 5—8: внезапная оптимизация картинок, первые шажки в CSS и ИИ</h3>
+                <p class="pub_date">Дата публикации: <time datetime="2026-06-16">16 июня 2026</time></p>
+                <section>
+                    <h4>Доведения до ума раздела об истории развития сайта</h4>
+                    <p>Что? Да! Я решил, что такой раздел должен быть прямо на сайте с возможностью взглянуть, как всё выглядело в тот или иной день. Вы, вероятно, прямо с неё читаете данный текст. Здесь будут история по дням изучения и история в виде полноценных снапшотов — копий сайта за тот или иной день. Они находятся в <a href="#snapshot-days">самом низу</a>. Внизу этих снапшотов была добавлена подпись о том, что это архивная версия сайта, и кнопки перехода от одного снапшота к следующему и предыдущему — Джеминай мне помог сделать это покрасивее.:&gt;</p>
+                </section>
+                <section>
+                    <h4>Желание публиковаться на GitHub</h4>
+                    <p>Где-то 4 дня назад я решил, что было бы круто разместить свой сайт на гитхабе, потому что он позволяет опубликовать сайт бесплатно, даже не оплачивая никакого хостинга. После этого начинается самое интересное…</p>
+                    <p>Во-первых, надо выбрать лицензию. ИИ предлагает как универсальный вариант лицензию от MIT, но я вспоминаю, что слышал легенды про лицензии GNU и восхищался. Погуглив, я решил, что буду брать AGPLv3. Она хороша тем, что любой человек, который решит работать с моим кодом, будет обязан опубликовать все свои изменения; иначе я буду иметь право его засудить. 🫦 Вот она: свобода кода любой ценой!</p>
+                    <p>Но с такой лицензией я дважды задумался над картинками, которые были у меня на сайте, а именно шуточные скриншоты из GTA в контексте мест, которые мне бы хотелось посетить. Уж не знаю, мог бы я в будущем заинтересовать Rockstar, но, если я правильно понимаю, это одна из компаний с вредными юристами, поэтому я решил не рисковать и брать свободные для распространения фотографии с <a href="https://www.pexels.com">Pexels</a>. Отлично, с интеллектуальной собственностью — будь оно проклята! — мы разобрались. Теперь можно просто вставить картинки, верно?.. Ну… не совсем.</p>
+                </section>
+                <section>
+                    <h4>Оптимизация размера изображений</h4>
+                    <p>Итак, загружать оригинал в 2 МиБ — это неприемлемо по нынешним <a href="https://tiny-img.com/blog/best-image-size-for-website/">веб-стандартам</a>. Я поговорил об этом с Чатом — ChatGPT, — и тот предложил мне bash-скрипт для сжатия. И после этого я упал в кроличью нору… Я думал расписать подробно, как и насколько разные ИИ мне помогли в создании скрипта, но мне кажется, что это будет излишним. Больше всего мне помогли Джеминай и Клод; первую заготовку сделал Чат, Грок тоже внёс пару правок, но начал слишком быстро просить денег и ограничивая наш чат на 8 часов. Клод выглядел самым способным по коду, хотя Джеминай не отставал (по крайней мере в работе с этим конкретным bash-скриптом) и был разве что подружелюбнее. Но! С Клодом был интересный диалог:</p>
+                    <p class="dialogue">
+                        — У меня опять горят глаза насчёт картинок. 🫦 Как это можно реализовать в нашем имеющемся скрипте? 🤔 <br>
+                        — Нет. 😄 <br><br>
+                        Серьёзно — сначала напиши хоть одну страницу. Ты не знаешь ещё какие размеры тебе нужны, как картинки будут вписаны в макет, какие брейкпоинты ты выберешь. Дописывать скрипт под размеры которые ты не знаешь — это работа вслепую. <br><br>
+                        Когда сделаешь первый макет и увидишь что картинка на мобильном занимает 480px, а на десктопе 1200px — вот тогда приходи, добавим за пять минут.
+                    </p>
+                    <p>Впервые ИИ мне отказал! Дальше я всё же смог его убедить мне помочь, сказав, что у меня уже есть несколько страниц, но это было интересно. А отказ, если честно, по делу. Как бы то ни было, теперь у меня есть скрипт, который при первом запуске спрашивает, в где хранится директория img, а при втором уточняет, в какую поддиректорию загружать конкретные файлы. Дальше он спрашивает, насколько агрессивную стратегию сжатия использовать; после этого он делает своё дело, сохраняя в директорию /original оригинал изображения, а на директорию выше кидает 7 файлов (каждый меньше 250 КиБ): AVIF и WEBP для экранов смартфонов (640 px), для экранов маленьких ноутбуков и планшетов (1200 px) и для десктопа (1920 px) и JPEG (чтобы в случае чего загрузилось даже на древнейших девайсах), давая в терминале сразу вывод для HTML-файла.</p>
+                    <p>Раз уж такое дело, неудобно будет не разместить прямо здесь эти картинки! (За одно взгляну, как сделать так, чтобы картинки занимали не пол-экрана.)</p>
+                    <p>Места, которые мне бы хотелось посетить:</p>
+                    <ul>
+                        <li>
+                            <p>Хельсинки</p>
+                            <figure>
+                                <picture class="photo">
+                                    <source type="image/avif" srcset="
+                                    /img/day_1/helsinki000/helsinki000-640.avif 640w,
+                                    /img/day_1/helsinki000/helsinki000-1200.avif 1200w,
+                                    /img/day_1/helsinki000/helsinki000-1920.avif 1920w,
+                                    " sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px" />
+                                    <source type="image/webp" srcset="
+                                    /img/day_1/helsinki000/helsinki000-640.webp 640w,
+                                    /img/day_1/helsinki000/helsinki000-1200.webp 1200w,
+                                    /img/day_1/helsinki000/helsinki000-1920.webp 1920w,
+                                    " sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px" />
+                                    <img src="/img/day_1/helsinki000/helsinki000-fallback.jpg" width="1200" height="1200" alt="Снежный вид на часовню тишины Камппи в Хельсинки, демонстрирующий современную архитектуру в зимней обстановке" loading="lazy" />
+                                </picture>
+                                <figcaption>Хельсинки, Уусимаа, Финляндия <br>
+                                    &copy;Ivan Dražić на <a href="https://www.pexels.com/photo/kamppi-chapel-in-winter-helsinki-finland-35816064/" target="_blank" rel="noopener">Pexels</a>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <p>Берлин</p>
+                            <figure>
+                                <picture>
+                                    <source type="image/avif" srcset="
+                                    /img/day_1/berlin000/berlin000-640.avif 640w,
+                                    /img/day_1/berlin000/berlin000-1200.avif 1200w,
+                                    /img/day_1/berlin000/berlin000-1920.avif 1920w,
+                                    " sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px" />
+                                    <source type="image/webp" srcset="
+                                    /img/day_1/berlin000/berlin000-640.webp 640w,
+                                    /img/day_1/berlin000/berlin000-1200.webp 1200w,
+                                    /img/day_1/berlin000/berlin000-1920.webp 1920w,
+                                    " sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px" />
+                                    <img src="/img/day_1/berlin000/berlin000-fallback.jpg" width="900" height="1200" alt="Трамваи на городской улице Берлина с заревом заката, демонстрирующие городскую жизнь и современную архитектуру." loading="lazy" />
+                                </picture>
+                                <figcaption>
+                                    Берлин, Германия <br>
+                                    &copy; Niklas Jeromin на <a href="https://www.pexels.com/photo/urban-trams-at-sunset-in-berlin-street-scene-34611601/" target="_blank" rel="noopener">Pexels</a>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <p>Акихабара</p>
+                            <figure>
+                                <picture>
+                                    <source type="image/avif" srcset="
+                                    /img/day_1/akihabara000/akihabara000-640.avif 640w,
+                                    /img/day_1/akihabara000/akihabara000-1200.avif 1200w,
+                                    /img/day_1/akihabara000/akihabara000-1920.avif 1920w,
+                                    " sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px" />
+                                    <source type="image/webp" srcset="
+                                    /img/day_1/akihabara000/akihabara000-640.webp 640w,
+                                    /img/day_1/akihabara000/akihabara000-1200.webp 1200w,
+                                    /img/day_1/akihabara000/akihabara000-1920.webp 1920w,
+                                    " sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px" />
+                                    <img src="/img/day_1/akihabara000/akihabara000-fallback.jpg" width="900" height="1200" alt="Яркая ночь в Акихабаре, Токио, с неоновыми огнями, рекламными щитами и уличной жизнью." loading="lazy" />
+                                </picture>
+                                <figcaption>Акихабара, Токио, Япония <br>
+                                    &copy; Şiyar AKBALIK на <a href="https://www.pexels.com/photo/vibrant-nightlife-in-akihabara-tokyo-35589758/" target="_blank" rel="noopener">Pexels</a></figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                    <p>Делюсь не без удовольствия кодом прямо здесь. 💫 (Надеюсь, меня не загрызут люди, которые, не знаю, стояли за созданием bash… кто знает, кто среди читателей будет? Как бы то ни было, это вайб-кодинг — не судите строго. 😝)</p>
+                    <details>
+                        <summary>Открывайте и используйте на свой страх и риск! 👀</summary>
+                        <pre><code>#!/bin/bash
+set -euo pipefail
+
+echo "=== AGGRESSIVE Image Optimization Script ==="
+echo "ВНИМАНИЕ: Этот скрипт может заметно ухудшать качество ради малого веса!"
+
+# ==================== ВЫБОР РЕЖИМА ====================
+echo "Выберите целевой режим:"
+echo "1) Hero / LCP          — очень строго (<180 KiB)"
+echo "2) Content             — строго (<230 KiB)"
+echo "3) Banner              — умеренно (<350 KiB)"
+echo "4) Gallery             — максимально (<110 KiB)"
+echo -n "Введите номер (1-4): "
+read -r mode
+
+case $mode in
+    1) MAX_DIM=1300; TARGET_WEBP=184320; MIN_QUALITY=18 ;;
+    2) MAX_DIM=1800; TARGET_WEBP=235520; MIN_QUALITY=22 ;;
+    3) MAX_DIM=2200; TARGET_WEBP=358400; MIN_QUALITY=28 ;;
+    4) MAX_DIM=1000; TARGET_WEBP=112640; MIN_QUALITY=15 ;;
+    *) echo "По умолчанию Content"; MAX_DIM=1800; TARGET_WEBP=235520; MIN_QUALITY=22 ;;
+esac
+
+dir="${1:-.}"
+originals_dir="$dir/originals"
+mkdir -p "$originals_dir"
+shopt -s nullglob
+
+# ==================== ПАЙПЛАЙН 1: JPG/PNG ====================
+files=("$dir"/*.{jpg,jpeg,png,JPG,JPEG,PNG})
+
+for input in "${files[@]}"; do
+    [ -e "$input" ] || continue
+    name=$(basename "$input")
+    base="${name%.*}"
+    webp="$dir/$base.webp"
+    avif="$dir/$base.avif"
+
+    echo ""
+    echo "=== Processing: $input ==="
+
+    # ==================== СОХРАНЯЕМ ОРИГИНАЛ ====================
+    cp "$input" "$originals_dir/$name"
+    echo " → Оригинал сохранён в $originals_dir/"
+
+    # ==================== РАЗМЕР ОРИГИНАЛА (для отчёта) ====================
+    original_size=$(stat -c %s "$input" 2>/dev/null || echo 0)
+
+    # ==================== WORK-КОПИЯ (не трогаем оригинал) ====================
+    ext="${name##*.}"
+    work="$dir/${base}_work.${ext}"
+    cp "$input" "$work"
+
+    # Гарантируем удаление work и исходника даже при ошибке
+    trap 'rm -f "$work" "$input"' EXIT
+
+    # ==================== РЕСАЙЗ WORK-КОПИИ ====================
+    width=$(magick identify -format "%w" "$work" 2>/dev/null || echo 0)
+    height=$(magick identify -format "%h" "$work" 2>/dev/null || echo 0)
+
+    if [ "$width" -gt "$MAX_DIM" ] || [ "$height" -gt "$MAX_DIM" ]; then
+        echo " → Resize to ${MAX_DIM}px..."
+        magick "$work" -resize "${MAX_DIM}x${MAX_DIM}>" -filter Lanczos -quality 92 "$work"
+        width=$(magick identify -format "%w" "$work" 2>/dev/null || echo 0)
+        height=$(magick identify -format "%h" "$work" 2>/dev/null || echo 0)
+    fi
+
+    # ==================== ALPHA CHECK ====================
+    has_alpha=0
+    if [[ "$input" == *.png || "$input" == *.PNG ]]; then
+        if magick identify -format "%[channels]" "$work" 2>/dev/null | grep -q 'a'; then
+            has_alpha=1
+        fi
+    fi
+
+    # ==================== PNG с альфой ====================
+    if [ "$has_alpha" -eq 1 ]; then
+        echo " → Alpha PNG — сжимаем с сохранением прозрачности"
+        pngquant --quality=40-85 --speed=1 --force --output "${work%.png}_tmp.png" "$work" \
+            && mv "${work%.png}_tmp.png" "$work" || true
+        oxipng -o 6 --strip safe --quiet "$work" || true
+    fi
+
+    # ==================== НАЧАЛЬНЫЙ WebP ====================
+    echo " → Создаём WebP (начальный проход)..."
+    magick "$work" -quality 72 \
+        -define webp:method=6 \
+        -define webp:pass=10 \
+        "$webp"
+
+    # ==================== АГРЕССИВНЫЙ ЦИКЛ ====================
+    # Каждый проход — от work-файла с новыми параметрами.
+    # Это исключает накопление артефактов при перезаписи WebP самого себя.
+    current_w=$width
+    current_h=$height
+
+    for pass in {1..8}; do
+        [ -f "$webp" ] || break
+        current_size=$(stat -c %s "$webp")
+
+        if [ "$current_size" -le "$TARGET_WEBP" ]; then
+            echo "   ✓ WebP в целевом диапазоне ($(numfmt --to=iec "$current_size"))"
+            break
+        fi
+
+        echo "   Pass $pass: $(numfmt --to=iec "$current_size") > цель → сжимаем сильнее"
+
+        quality=$((72 - pass * 9))
+        [ "$quality" -lt "$MIN_QUALITY" ] && quality=$MIN_QUALITY
+
+        # Уменьшаем разрешение на 10% за проход (накопительно)
+        current_w=$(( current_w * 90 / 100 ))
+        current_h=$(( current_h * 90 / 100 ))
+
+        # Минимум 320px по меньшей стороне
+        min_side=$(( current_w < current_h ? current_w : current_h ))
+        if [ "$min_side" -lt 320 ]; then
+            echo "   → Достигнут минимальный размер 320px, дальнейший ресайз остановлен"
+            magick "$work" \
+                -quality "$quality" \
+                -define webp:method=6 \
+                -define webp:pass=10 \
+                -define webp:alpha-quality=30 \
+                "$webp"
+            break
+        fi
+
+        # Каждый проход — от work, не от предыдущего WebP
+        magick "$work" \
+            -resize "${current_w}x${current_h}" \
+            -quality "$quality" \
+            -define webp:method=6 \
+            -define webp:pass=10 \
+            -define webp:alpha-quality=30 \
+            "$webp"
+    done
+
+    # ==================== AVIF (из work-файла) ====================
+    final_webp_size=$(stat -c %s "$webp" 2>/dev/null || echo 0)
+    avif_target=$(( TARGET_WEBP * 70 / 100 ))
+    echo " → Создаём AVIF..."
+    magick "$work" -resize "${current_w}x${current_h}" -quality 60 "$avif"
+
+    avif_size=$(stat -c %s "$avif" 2>/dev/null || echo 0)
+    if [ "$avif_size" -gt "$avif_target" ]; then
+        magick "$work" -resize "${current_w}x${current_h}" -quality 40 "$avif"
+    fi
+
+    # ==================== УДАЛЯЕМ ИСХОДНИК И WORK ====================
+    rm -f "$input" "$work"
+    trap - EXIT
+    echo " → Исходный файл удалён (оригинал в $originals_dir/)"
+
+    # ==================== ИТОГ И ОТЧЁТ ЭКОНОМИИ ====================
+    final_avif_size=$(stat -c %s "$avif" 2>/dev/null || echo 0)
+    webp_saving=$(( original_size - final_webp_size ))
+    avif_saving=$(( original_size - final_avif_size ))
+    webp_percent=$(( original_size > 0 ? webp_saving * 100 / original_size : 0 ))
+    avif_percent=$(( original_size > 0 ? avif_saving * 100 / original_size : 0 ))
+
+    echo "   Оригинал       : $(numfmt --to=iec "$original_size")"
+    echo "   Финальный WebP : $(numfmt --to=iec "$final_webp_size") (−${webp_percent}%)"
+    echo "   Финальный AVIF : $(numfmt --to=iec "$final_avif_size") (−${avif_percent}%)"
+
+    if [ "$final_webp_size" -gt "$TARGET_WEBP" ]; then
+        echo "   ⚠ Цель не достигнута (изображение слишком детализировано или велико)"
+    fi
+done
+
+# ==================== ПАЙПЛАЙН 2: одинокие WebP/AVIF ====================
+echo ""
+echo "=== Проверка одиночных WebP/AVIF ==="
+
+webp_files=("$dir"/*.webp)
+avif_files=("$dir"/*.avif)
+
+for wf in "${webp_files[@]}"; do
+    [ -e "$wf" ] || continue
+    base="${wf%.webp}"
+    af="${base}.avif"
+    [ -f "$af" ] && continue  # пара уже есть
+
+    echo ""
+    echo "=== Одинокий WebP: $wf → создаём AVIF ==="
+    original_size=$(stat -c %s "$wf" 2>/dev/null || echo 0)
+    avif_target=$(( TARGET_WEBP * 70 / 100 ))
+
+    magick "$wf" -quality 60 "$af"
+    avif_size=$(stat -c %s "$af" 2>/dev/null || echo 0)
+    if [ "$avif_size" -gt "$avif_target" ]; then
+        magick "$wf" -quality 40 "$af"
+        avif_size=$(stat -c %s "$af" 2>/dev/null || echo 0)
+    fi
+
+    percent=$(( original_size > 0 ? (original_size - avif_size) * 100 / original_size : 0 ))
+    echo "   WebP           : $(numfmt --to=iec "$original_size")"
+    echo "   Финальный AVIF : $(numfmt --to=iec "$avif_size") (−${percent}%)"
+done
+
+for af in "${avif_files[@]}"; do
+    [ -e "$af" ] || continue
+    base="${af%.avif}"
+    wf="${base}.webp"
+    [ -f "$wf" ] && continue  # пара уже есть
+
+    echo ""
+    echo "=== Одинокий AVIF: $af → создаём WebP ==="
+    original_size=$(stat -c %s "$af" 2>/dev/null || echo 0)
+    width=$(magick identify -format "%w" "$af" 2>/dev/null || echo 0)
+    height=$(magick identify -format "%h" "$af" 2>/dev/null || echo 0)
+    current_w=$width
+    current_h=$height
+
+    magick "$af" -quality 72 \
+        -define webp:method=6 \
+        -define webp:pass=10 \
+        "$wf"
+
+    for pass in {1..8}; do
+        current_size=$(stat -c %s "$wf")
+        [ "$current_size" -le "$TARGET_WEBP" ] && break
+
+        echo "   Pass $pass: $(numfmt --to=iec "$current_size") > цель → сжимаем сильнее"
+        quality=$((72 - pass * 9))
+        [ "$quality" -lt "$MIN_QUALITY" ] && quality=$MIN_QUALITY
+        current_w=$(( current_w * 90 / 100 ))
+        current_h=$(( current_h * 90 / 100 ))
+        min_side=$(( current_w < current_h ? current_w : current_h ))
+        [ "$min_side" -lt 320 ] && break
+
+        magick "$af" \
+            -resize "${current_w}x${current_h}" \
+            -quality "$quality" \
+            -define webp:method=6 \
+            -define webp:pass=10 \
+            "$wf"
+    done
+
+    final_size=$(stat -c %s "$wf" 2>/dev/null || echo 0)
+    percent=$(( original_size > 0 ? (original_size - final_size) * 100 / original_size : 0 ))
+    echo "   AVIF           : $(numfmt --to=iec "$original_size")"
+    echo "   Финальный WebP : $(numfmt --to=iec "$final_size") (−${percent}%)"
+done
+
+echo ""
+echo "=== Aggressive optimization finished! ==="
+
+                    </code></pre>
+                    </details>
+                    <h4>Первые шажки в CSS</h4>
+                    <p>Прочитав заголовок, можно подумать, что я разобрался с <a href="https://youtu.be/kUMe1FH4CHE?si=kcSnhxOxJ3-o9WDm">курсом</a> от FreeCodeCamp по HTML, но не тут-то было! Пока я возился с ИИ со скриптом, Джеминай так и норовил мне надавать разных советов, что и как можно сделать симпатичнее; потом мне самому стало любопытно, как расстояние увеличить между ссылками в хедере, как сделать отступы у абзацев и всё-всё-всё… В итоге я теперь знаю, как отмечаются в селекторах классы, айди и теги в CSS-файле и некоторые свойства типа <code>text-align</code> и <code>font-size</code>. Не смейтесь, все с чего-то начинают! 🤓☝️</p>
+                    <p>Что ж, на сегодня, кажется, всё. Пора публиковаться на гитхабе!</p>
+                </section>
+            </article>
+            <article id="day_4L">
+                <h3>День 4: таблицы и забота о здоровье</h3>
+                <p class="pub_date">Дата публикации: <time datetime="2026-06-12">12 июня, 2026</time></p>
+                <section id="tables">
+                    <h4>Таблицы</h4>
+                    <p>Всем привет! Я пережил экзамен по математике и только сейчас возвращаюсь к работе над сайтом и изучению HTML. В последний раз я остановился на таблицах. Не понял некоторые моменты и хочу остановиться на них поподробнее.</p>
+                    <p>Покажу вам, какой ноут удалось взять на Авито за 80000 ₽. :D</p>
+                    <table>
+                        <caption>ASUS TUF Gaming A15 FA507NV (модифицированный)</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Процессор</th>
+                                <td>AMD Ryzen 5 7535HS</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Встроенная видеокарта</th>
+                                <td>AMD Radeon 660M</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Дискретная видеокарта</th>
+                                <td>NVIDIA GeForce RTX 4060 Laptop GPU (140 Вт)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Оперативная память</th>
+                                <td>DDR5 Kingston FURY Impact [KF556S40IB-16] 16 ГБ x 2</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2" scope="rowgroup">SSD</th>
+                                <td>WD PC SN740 SDDPNQD-512G-1002</td>
+                            </tr>
+                            <tr>
+                                <td>ADATA LEGEND 860</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Ёмкость аккумулятора</th>
+                                <td>90 Вт*ч</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Оставшаяся ёмкость аккумулятора</th>
+                                <td>87 %</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Если честно, доволен покупкой, как слон!</p>
+                </section>
+                <section id="health_care">
+                    <h4>Забота о здоровье глаз и рук</h4>
+                    <p>Сегодня значительную часть дня я потратил на выстраивание стратегии «безвредного» досуга за ПК. Что я имею в виду? Ни для кого не секрет, что проводить сутки перед монитором не очень полезно. Это влияет и на здоровье глаз, и на здоровье рук, и на здоровье спины. Со спиной мне ещё предстоит разбираться (пока нет возможности реализовать всё это грамотно), но с глазами и руками, особенно дома, справиться можно.</p>
+                    <p>Итак, начнём с глаз. Проведя небольшой ресёрч, выяснил, что корпоративному миру было даровано несколько советов:</p>
+                    <ul>
+                        <li>Правило 20-20-20</li>
+                        <p>Незамысловатое предложение, данное в девяностые годы прошлого века оптометристом Джеффри Аншелом, гласит, что каждые 20 минут надо 20 секунд фокусировать взгляд на предмете, находящемся на расстоянии 20 футов (~6 метров). Чтобы его соблюдать, я из Flathub скачал Stretchly — утилиту, которая раз в заданные промежуток времени блокирует экран, чтобы человек мог сделать свои дела со глазами. Я настроил его так, чтобы раз в час также был перерыв на 5 минут — это необходимо для полноценной разминки.</p>
+                        <li>Разминка для глаз</li>
+                        <p>Полная разминка для глаз, которую я теперь делаю раз в час работы за ноутом, указана далее. Как раз отточу навык создания таблиц!</p>
+                        <table>
+                            <caption>Моя разминка для глаз</caption>
+                            <thead>
+                                <th>Упражнение</th>
+                                <th>Затрачиваемое время (в секундах)</th>
+                            </thead>
+                            <tbody">
+                                <tr>
+                                    <td>Пальминг</td>
+                                    <td><time datetime="PT50S">50</time></td>
+                                </tr>
+                                <tr>
+                                    <td>Движения вверх-вниз</td>
+                                    <td><time datetime="PT25S">25</time></td>
+                                </tr>
+                                <tr>
+                                    <td>Движения вправо-влево</td>
+                                    <td><time datetime="PT25S">25</time></td>
+                                </tr>
+                                <tr>
+                                    <td>Круговые движения по часовой стрелке</td>
+                                    <td><time datetime="PT20S">20</time></td>
+                                </tr>
+                                <tr>
+                                    <td>Круговые движения против часовой стрелки</td>
+                                    <td><time datetime="PT20S">20</time></td>
+                                </tr>
+                                <tr>
+                                    <td>Поморгать</td>
+                                    <td><time datetime="PT30S">30</time></td>
+                                </tr>
+                                <tr>
+                                    <td>Вблизь-вдаль (по 3 секунды)</td>
+                                    <td><time datetime="PT60S">60</time></td>
+                                </tr>
+                                <tr>
+                                    <td>Закрыть глаза</td>
+                                    <td><time datetime="PT20S">20</time></td>
+                                </tr>
+                                </tbody>
+                        </table>
+                        <p>Делать её немного утомительно, но я исхожу из того, что она поможет замедлить негативную динамику по моей близорукости.</p>
+                        <li>Расположение монитора (в моём контексте экрана ноутбука)</li>
+                        <p>Проведя также небольшой ресёрч, выяснилось, что верхняя ⅓ экрана должна быть на уровне глаз (или даже немного ниже). Немного поэкспериментировав с подставкой, получилось расположить ноутбук так, как надо.</p>
+                        <li>Моргать</li>
+                        <p>Тут, пожалуй, самое сложное… В процессе работы перед экраном надо не забывать моргать. У меня это получается не очень хорошо, ведь я часто фокусируюсь на том, что делаю, а не на моргании. Мне есть куда расти!</p>
+                    </ul>
+                    <p>Дальше можно поговорить о здоровье рук, и тут будет полезное предоставить некоторую историю. В период с <time datetime="2020">2020</time> по <time datetime="2022">2022</time> я любил проводить время в ритм-игре osu!, где нужно было одной рукой наводиться стилусом на кружочки и другой рукой жать две кнопки (всё это под отличную музыку). Как иногда бывает, я делал это очень неаккуратно: сильно прижимал запястья к столу, неправильно держал стилус (да, бывают разные хваты, и я выбрал один из самых неэргономичных). В итоге у меня начали болеть запястья, и я оставил игру. Потом боль почти полностью исчезла и достигла едва заметного плато, которое я не хочу ухудшать. Сейчас у меня есть сплит-клавиатура со встроенным трекболом и на крайние случаи вертикальная мышь. Эти девайсы сами по себе ставят запястья в куда более естественное положение, но, очевидно, чтобы сократить потенциальные разминки, рекомендуется делать разминки. Раз в час я обращаюсь к популярной в осу-сообществе <a href="https://youtu.be/H6y0D_8kRoU">видеоинструкции</a> от Tykato Fitness. Удачи мне; надеюсь, не заброшу эту историю. :')</p>
+                </section>
+            </article>
+            <article id="days-123L">
+                <h3>Дни 1, 2 и 3: первые потуги</h3>
+                <p>В первые три дня изучение шло в формате «вставляю всё, что показывает чувак с гайда, на одну страницу и смотрю, что будет»; на третий день я решил сделать какую-никакую главную страницу, поэтому лучше всего просто взглянуть, как выглядел сайт в списке снапшотов, следующим после секции про обучение по дням.</p>
+            </article>
+        </section>
+        <section id="snapshot-days">
+            <h2>Снапшоты сайта по дням</h2>
+            <article>
+                <ul>
+                    <li><a href="/archive/2026/june/01/index.html">День 1</a></li>
+                    <li><a href="/archive/2026/june/02/index.html">День 2</a></li>
+                    <li><a href="/archive/2026/june/03/index.html">День 3</a></li>
+                    <li><a href="/archive/2026/june/12/index.html">День 4</a>, <time datetime="2026-06-12">12 июня, 2026</time></li>
+                </ul>
+            </article>
+        </section>
+        <hr>
+    </main>
+    <footer>
+        <p>© Copyleft — все права развращены!</p>
+        <p>Сайт распространяется по лицензии <a href="https://www.gnu.org/licenses/agpl-3.0.ru.html">AGPLv3</a>. Код доступен на <a href="https://github.com/workolai/personal-site">GitHub</a>.</p>
+        <p>Николай Огрызков</p>
+        <p>2026</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+table,
+tr,
+th,
+td,
+caption {
+    border: 1px solid #eee;
+    border-collapse: collapse;
+    padding: 0.5rem;
+}

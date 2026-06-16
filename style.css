@@ -1,0 +1,71 @@
+table,
+tr,
+th,
+td,
+caption {
+    border: 1px solid #eee;
+    border-collapse: collapse;
+    padding: 0.5rem;
+}
+#site-title {
+    font-size: 2rem;
+}
+
+article p {
+    text-indent: 1.8rem;
+    hyphens: auto;
+    text-align: justify;
+}
+
+article section ul p {
+  text-indent: 0;
+}
+
+.pub_date {
+    text-indent: 0;
+}
+
+.dialogue {
+    border: 2px solid #eee;
+    border-radius: 10px;
+    text-indent: 0;
+}
+
+footer,
+header {
+    text-align: center;
+}
+
+.header-urls {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #0066cc;
+    transition: color 0.2s ease;
+}
+a:hover {
+    color:#004499
+}
+
+figure {
+    max-width: 500px;
+    margin: 20px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto; 
+    display: block;
+}
+
+pre {
+    max-width: 100%;
+    overflow-x: auto;
+}
