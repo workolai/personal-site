@@ -1,0 +1,113 @@
+table,
+tr,
+th,
+td,
+caption {
+    border: 1px solid #eee;
+    border-collapse: collapse;
+    padding: 0.5rem;
+}
+
+#site-title {
+    font-size: 2rem;
+}
+
+article p {
+    text-indent: 1.8rem;
+    hyphens: auto;
+    text-align: justify;
+}
+
+article section ul p {
+    text-indent: 0;
+}
+
+.pub_date {
+    text-indent: 0;
+}
+
+.dialogue {
+    border: 2px solid #eee;
+    text-indent: 0;
+}
+
+footer,
+header {
+    text-align: center;
+}
+
+.header-urls {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #0066cc;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #004499
+}
+
+figure {
+    max-width: 500px;
+    margin: 20px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+pre {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+
+.archive-nav {
+    text-align: center;
+    margin: 20px auto;
+    font-family: sans-serif;
+    border: 2px solid;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.archive-nav_title {
+    font-style: italic;
+}
+
+.archive-btn {
+    text-decoration: none;
+    color: #0066cc;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.archive-btn:hover {
+    color: #004499;
+}
+
+
+.archive-btn.disabled {
+    color: #a0a0a0;
+    pointer-events: none; 
+    cursor: not-allowed;
+    text-decoration: none;
+    user-select: none;
+}
+
+.archive-nav_desc {
+    font-style: italic;
+}

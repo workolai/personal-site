@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /img/unconverted
+Sitemap: https://workolai.github.io/personal-site/sitemap.xml

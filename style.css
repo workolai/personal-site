@@ -1,3 +1,69 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #004499;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+figure {
+    max-width: 500px;
+    margin: 20px 0;
+}
+
+pre {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+header,
+footer {
+    text-align: center;
+}
+
+#site-title {
+    font-size: 2rem;
+}
+
+.header-urls {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#snapshot-days ul li a {
+    display: inline-block;
+    margin: 0 0 4px;
+}
+
+article p {
+    text-align: justify;
+    text-indent: 1.8rem;
+    hyphens: auto;
+}
+
+article section ul p,
+.pub_date,
+.dialogue {
+    text-indent: 0;
+}
+
+.dialogue {
+    border: 2px solid #eee;
+}
+
 table,
 tr,
 th,
@@ -8,66 +74,41 @@ caption {
     padding: 0.5rem;
 }
 
-#site-title {
-    font-size: 2rem;
-}
-
-article p {
-    text-indent: 1.8rem;
-    hyphens: auto;
-    text-align: justify;
-}
-
-article section ul p {
-    text-indent: 0;
-}
-
-.pub_date {
-    text-indent: 0;
-}
-
-.dialogue {
-    border: 2px solid #eee;
-    text-indent: 0;
-}
-
-footer,
-header {
+.archive-nav {
+    width: fit-content;
+    margin: 20px auto;
+    padding: 15px;
+    border: 2px solid;
+    border-radius: 20px;
     text-align: center;
+    font-family: sans-serif;
 }
 
-.header-urls {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+.archive-nav_title,
+.archive-nav_desc {
+    font-style: italic;
 }
 
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-a {
-    text-decoration: none;
+.archive-btn {
+    margin: 0 10px;
+    font-weight: 500;
     color: #0066cc;
+    text-decoration: none;
     transition: color 0.2s ease;
 }
 
-a:hover {
-    color: #004499
+.archive-btn:hover {
+    color: #004499;
 }
 
-figure {
-    max-width: 500px;
-    margin: 20px 0;
+.archive-btn.disabled {
+    color: #a0a0a0;
+    text-decoration: none;
+    cursor: not-allowed;
+    pointer-events: none;
+    user-select: none;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-pre {
-    max-width: 100%;
-    overflow-x: auto;
+form p {
+    text-indent: 0;
 }

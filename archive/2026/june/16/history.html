@@ -6,7 +6,8 @@
     <meta name="author" content="Николай Огрызков">
     <meta name="description" content="История развития сайта Николая Огрызкова по дням ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="icon.jpg" type="image/jpeg">
+    <meta name="robots" content="noindex, nofollow"> <!-- Добавляется во все снапшоты.-->
+    <link rel="icon" href="../../../../icon.jpg" type="image/jpeg">
     <link rel="stylesheet" href="style.css">
     <title>Развитие сайта</title>
 </head>
@@ -49,34 +50,6 @@
 
         <section id="learning-days">
             <h2>Обучение по дням</h2>
-            <article id="day_9L">
-                <h3>День 9: кнопки, формы и прочие ужасы, которые за один раз не запомнишь…</h3>
-                <p class="pub_date">Дата публикации: <time datetime="2026-06-17">17 июня 2026</time></p>
-                <section>
-                    <h4>Кнопки и формы (будь они неладны!)</h4>
-                    <p>Всех приветствую! Хотелось бы выйти на режим ежедневных коммитов (мечтать не вредно! 😝), поэтому активно учусь дальше.</p>
-                    <p>Сегодня, после наведения финального лоска в CSS — да, Джеминай мне всё предлагает и предлагает кучу симпатичного, а я всё не против и не против, — я наконец-то возвращаюсь к <a href="https://youtu.be/kUMe1FH4CHE?si=kcSnhxOxJ3-o9WDm">курсу</a> от FreeCodeCamp по HTML! Следующая тема… о-о-ой, формы и кнопки… Я помню, как я был поражён количеству полученной информации, когда у меня была первая и менее публичная попытка в веб-разработку с <a href="https://youtu.be/HGTJBPNC-Gw?si=sgWoscCLTNhJV2VG">курсом</a> уже от BroCode. Надеюсь, в этот раз будет попроще. Хотя длина этого урока на таймлайне не вызывает доверия. 🥲 Попробуем?..</p>
-                    <form action="https://httpbin.org/get" method="get">
-                        <p><label for="nickname">Никнейм</label>
-                            <input type="text" name="nickname" id="nickname" placeholder="alexBigSmoke" autocomplete="off" required>
-                        </p>
-                        <p>
-                            <label for="password">Пароль</label>
-                            <input type="password" name="password" id="password" placeholder="*засекречено*" required>
-                        </p>
-                        <p>
-                            <label for="phone">Телефон</label>
-                            <input type="tel" name="phone" id="phone" placeholder="9999999999" pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}">
-                        </p>
-                        <p>
-                            <label for="number">Количество</label>
-                            <input type="number" name="number" id="number" min="1" max="100" value="67">
-                        </p>
-                    </form>
-                    <p><strong>Важное примечание: все формы липовые и мне не приходят на данный момент!</strong></p>
-                    <p>Окей, чат, завтра мне на экзамен последний (конечно, я ничего не знаю и ничего не напишу), так что пойду уже спать. <code>git push origin main</code> и до завтра! 🍓</p>
-                </section>
-            </article>
             <article id="days_5to8L">
                 <h3>Дни 5—8: внезапная оптимизация картинок, первые шажки в CSS и ИИ</h3>
                 <p class="pub_date">Дата публикации: <time datetime="2026-06-16">16 июня 2026</time></p>
@@ -100,7 +73,7 @@
                         Когда сделаешь первый макет и увидишь что картинка на мобильном занимает 480px, а на десктопе 1200px — вот тогда приходи, добавим за пять минут.
                     </p>
                     <p>Впервые ИИ мне отказал! Дальше я всё же смог его убедить мне помочь, сказав, что у меня уже есть несколько страниц, но это было интересно. А отказ, если честно, по делу. Как бы то ни было, теперь у меня есть скрипт, который при первом запуске спрашивает, в где хранится директория img, а при втором уточняет, в какую поддиректорию загружать конкретные файлы. Дальше он спрашивает, насколько агрессивную стратегию сжатия использовать; после этого он делает своё дело, сохраняя в директорию /original оригинал изображения, а на директорию выше кидает 7 файлов (каждый меньше 250 КиБ): AVIF и WEBP для экранов смартфонов (640 px), для экранов маленьких ноутбуков и планшетов (1200 px) и для десктопа (1920 px) и JPEG (чтобы в случае чего загрузилось даже на древнейших девайсах), давая в терминале сразу вывод для HTML-файла.</p>
-                    <p>Раз уж такое дело, неудобно будет не разместить прямо здесь эти картинки! (Заодно взгляну, как сделать так, чтобы картинки занимали не пол-экрана.)</p>
+                    <p>Раз уж такое дело, неудобно будет не разместить прямо здесь эти картинки! (За одно взгляну, как сделать так, чтобы картинки занимали не пол-экрана.)</p>
                     <p>Места, которые мне бы хотелось посетить:</p>
                     <ul>
                         <li>
@@ -108,14 +81,14 @@
                             <figure>
                                 <picture>
                                     <source type="image/avif" srcset="
-                                    img/day_1/helsinki000/helsinki000-640.avif 640w,
-                                    img/day_1/helsinki000/helsinki000-1200.avif 1200w,
-                                    img/day_1/helsinki000/helsinki000-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    ../../../../img/day_1/helsinki000/helsinki000-640.avif 640w,
+                                    ../../../../img/day_1/helsinki000/helsinki000-1200.avif 1200w,
+                                    ../../../../img/day_1/helsinki000/helsinki000-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
                                     <source type="image/webp" srcset="
-                                    img/day_1/helsinki000/helsinki000-640.webp 640w,
-                                    img/day_1/helsinki000/helsinki000-1200.webp 1200w,
-                                    img/day_1/helsinki000/helsinki000-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
-                                    <img src="img/day_1/helsinki000/helsinki000-fallback.jpg" width="1200" height="1200" alt="Снежный вид на часовню тишины Камппи в Хельсинки, демонстрирующий современную архитектуру в зимней обстановке" loading="lazy">
+                                    ../../../../img/day_1/helsinki000/helsinki000-640.webp 640w,
+                                    ../../../../img/day_1/helsinki000/helsinki000-1200.webp 1200w,
+                                    ../../../../img/day_1/helsinki000/helsinki000-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    <img src="../../../../img/day_1/helsinki000/helsinki000-fallback.jpg" width="1200" height="1200" alt="Снежный вид на часовню тишины Камппи в Хельсинки, демонстрирующий современную архитектуру в зимней обстановке" loading="lazy">
                                 </picture>
                                 <figcaption>Хельсинки, Уусимаа, Финляндия <br>
                                     &copy;Ivan Dražić на <a href="https://www.pexels.com/photo/kamppi-chapel-in-winter-helsinki-finland-35816064/" target="_blank" rel="noopener">Pexels</a>
@@ -127,14 +100,14 @@
                             <figure>
                                 <picture>
                                     <source type="image/avif" srcset="
-                                    img/day_1/berlin000/berlin000-640.avif 640w,
-                                    img/day_1/berlin000/berlin000-1200.avif 1200w,
-                                    img/day_1/berlin000/berlin000-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    ../../../../img/day_1/berlin000/berlin000-640.avif 640w,
+                                    ../../../../img/day_1/berlin000/berlin000-1200.avif 1200w,
+                                    ../../../../img/day_1/berlin000/berlin000-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
                                     <source type="image/webp" srcset="
-                                    img/day_1/berlin000/berlin000-640.webp 640w,
-                                    img/day_1/berlin000/berlin000-1200.webp 1200w,
-                                    img/day_1/berlin000/berlin000-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
-                                    <img src="img/day_1/berlin000/berlin000-fallback.jpg" width="900" height="1200" alt="Трамваи на городской улице Берлина с заревом заката, демонстрирующие городскую жизнь и современную архитектуру" loading="lazy">
+                                    ../../../../img/day_1/berlin000/berlin000-640.webp 640w,
+                                    ../../../../img/day_1/berlin000/berlin000-1200.webp 1200w,
+                                    ../../../../img/day_1/berlin000/berlin000-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    <img src="../../../../img/day_1/berlin000/berlin000-fallback.jpg" width="900" height="1200" alt="Трамваи на городской улице Берлина с заревом заката, демонстрирующие городскую жизнь и современную архитектуру" loading="lazy">
                                 </picture>
                                 <figcaption>
                                     Берлин, Германия <br>
@@ -147,14 +120,14 @@
                             <figure>
                                 <picture>
                                     <source type="image/avif" srcset="
-                                    img/day_1/akihabara000/akihabara000-640.avif 640w,
-                                    img/day_1/akihabara000/akihabara000-1200.avif 1200w,
-                                    img/day_1/akihabara000/akihabara000-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    ../../../../img/day_1/akihabara000/akihabara000-640.avif 640w,
+                                    ../../../../img/day_1/akihabara000/akihabara000-1200.avif 1200w,
+                                    ../../../../img/day_1/akihabara000/akihabara000-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
                                     <source type="image/webp" srcset="
-                                    img/day_1/akihabara000/akihabara000-640.webp 640w,
-                                    img/day_1/akihabara000/akihabara000-1200.webp 1200w,
-                                    img/day_1/akihabara000/akihabara000-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
-                                    <img src="img/day_1/akihabara000/akihabara000-fallback.jpg" width="900" height="1200" alt="Яркая ночь в Акихабаре, Токио, с неоновыми огнями, рекламными щитами и уличной жизнью" loading="lazy">
+                                    ../../../../img/day_1/akihabara000/akihabara000-640.webp 640w,
+                                    ../../../../img/day_1/akihabara000/akihabara000-1200.webp 1200w,
+                                    ../../../../img/day_1/akihabara000/akihabara000-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    <img src="../../../../img/day_1/akihabara000/akihabara000-fallback.jpg" width="900" height="1200" alt="Яркая ночь в Акихабаре, Токио, с неоновыми огнями, рекламными щитами и уличной жизнью" loading="lazy">
                                 </picture>
                                 <figcaption>Акихабара, Токио, Япония <br>
                                     &copy; Şiyar AKBALIK на <a href="https://www.pexels.com/photo/vibrant-nightlife-in-akihabara-tokyo-35589758/" target="_blank" rel="noopener">Pexels</a></figcaption>
@@ -602,11 +575,10 @@ echo "=== Все картинки обработаны параллельно и
         <section id="snapshot-days">
             <h2>Снапшоты сайта по дням</h2>
             <ul>
-                <li><a href="archive/2026/june/01/index.html">День 1</a></li>
-                <li><a href="archive/2026/june/02/index.html">День 2</a></li>
-                <li><a href="archive/2026/june/03/index.html">День 3</a></li>
-                <li><a href="archive/2026/june/12/index.html">День 4</a>, <time datetime="2026-06-12">12 июня 2026</time></li>
-                <li><a href="archive/2026/june/16/index.html">Дни 5—8</a>, <time datetime="2026-06-16">16 июня 2026</time></li>
+                <li><a href="../../../../archive/2026/june/01/index.html">День 1</a></li>
+                <li><a href="../../../../archive/2026/june/02/index.html">День 2</a></li>
+                <li><a href="../../../../archive/2026/june/03/index.html">День 3</a></li>
+                <li><a href="../../../../archive/2026/june/12/index.html">День 4</a>, <time datetime="2026-06-12">12 июня, 2026</time></li>
             </ul>
         </section>
         <hr>
@@ -616,6 +588,16 @@ echo "=== Все картинки обработаны параллельно и
         <p>Сайт распространяется по лицензии <a href="https://www.gnu.org/licenses/agpl-3.0.ru.html">AGPLv3</a>. Код доступен на <a href="https://github.com/workolai/personal-site">GitHub</a>.</p>
         <p>Николай Огрызков</p>
         <p>2026</p>
+        <nav class="archive-nav">
+            <p>💡 <span class="archive-nav_title">Вы находитесь в архиве. Код выше был актуален <time datetime="2026-06-16">16 июня 2026</time>.</span> 💡</p>
+            <p>
+                <a href="../../../../history.html">
+                    Перейти к актуальной версии сайта (современная верстка)
+                </a>
+            </p>
+            <p>🌠 <span class="archive-nav_title">Также вы можете продолжить исследование истории изменений.</span> 🌠</p>
+            <p><a href="../../../../archive/2026/june/12/history.html" class="archive-btn">← Предыдущий снапшот</a><a href="#" class="archive-btn disabled" aria-disabled="true">Следующий снапшот →</a></p>
+        </nav>
     </footer>
 </body>
 
