@@ -1,0 +1,26 @@
+name: Deploy Website to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy via Rsync
+        uses: Burnett01/rsync-deployments@v7.0.1
+        with:
+          switches: "-avzr --delete"
+          path: "./" 
+          remote_path: "/var/www/html"
+        env:
+          DEPLOY_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          ARGS: "-o StrictHostKeyChecking=no -p 22"
+          SERVER_IP: ${{ secrets.SERVER_IP }}
+          USER: ${{ secrets.SERVER_USER }}
