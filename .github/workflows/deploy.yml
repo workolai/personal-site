@@ -14,13 +14,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy via Rsync
-        uses: Burnett01/rsync-deployments@v7.0.1
-        with:
-          switches: "-avzr --delete"
-          path: "./" 
-          remote_path: "/var/www/html"
+        uses: AEnterprise/rsync-deploy@v1.0.2
         env:
           DEPLOY_KEY: ${{ secrets.SERVER_SSH_KEY }}
-          ARGS: "-o StrictHostKeyChecking=no -p 22"
+          ARGS: "-avz --delete"
+          SERVER_PORT: "22"
+          FOLDER: "./"
           SERVER_IP: ${{ secrets.SERVER_IP }}
-          USER: ${{ secrets.SERVER_USER }}
+          USERNAME: ${{ secrets.SERVER_USER }}
+          SERVER_DESTINATION: "/var/www/html"
