@@ -1,7 +1,6 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 19px;
-    background-color: papayawhip
 }
 
 a {
@@ -76,10 +75,6 @@ article section ul p,
     text-indent: 0;
 }
 
-form p {
-    text-indent: 0;
-}
-
 .dialogue {
     border: 2px solid #eee;
     padding: 30px 20px;
@@ -130,7 +125,6 @@ caption {
     user-select: none;
 }
 
-p.experimental-css {
-    color:indigo;
-    font-size:25px
+form p {
+    text-indent: 0;
 }

@@ -7,6 +7,7 @@
     <meta name="author" content="Николай Огрызков">
     <meta name="description" content="Информация о содержании сайта">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="49lybePYrbn-wa7il27bU6gj7-zHs3dq48lLSP1Uicw">
     <meta name="robots" content="noindex, nofollow"> <!-- Добавляется во все снапшоты.-->
     <title>Николай Огрызков. Личный блог</title>
     <link rel="icon" href="../../../../icon.jpg" type="image/jpeg">
@@ -23,19 +24,19 @@
             <a href="history.html">Развитие сайта</a>
         </nav>
         <hr>
+        <details class="container navig">
+            <summary>Навигация по странице</summary>
+            <nav aria-label="Навигация по странице">
+                <ol>
+                    <li><a href="#general_greetings">Кто я?</a></li>
+                    <li><a href="#current_plan">Каков текущий план?</a></li>
+                    <li><a href="#about-this-page">Об этой странице</a></li>
+                    <li><a href="#site-structure">Структура сайта</a></li>
+                </ol>
+            </nav>
+        </details>
     </header>
-    <details>
-        <summary>Навигация по странице</summary>
-        <nav aria-label="primary_navigation">
-            <ol>
-                <li><a href="#general_greetings">Кто я?</a></li>
-                <li><a href="#current_plan">Каков текущий план?</a></li>
-                <li><a href="#about-this-page">Об этой странице</a></li>
-                <li><a href="#site-structure">Структура сайта</a></li>
-            </ol>
-        </nav>
-    </details>
-    <main>
+    <main class="container">
         <article>
             <h1>Главная страница</h1>
             <section id="general_greetings">
@@ -68,21 +69,21 @@
             </section>
         </article>
     </main>
-    <hr>
     <footer>
+        <hr>
         <p>© Copyleft — все права развращены!</p>
         <p>Сайт распространяется по лицензии <a href="https://www.gnu.org/licenses/agpl-3.0.ru.html">AGPLv3</a>. Код доступен на <a href="https://github.com/workolai/personal-site">GitHub</a>.</p>
         <p>Николай Огрызков</p>
         <p>2026</p>
         <nav class="archive-nav">
-            <p>💡 <span class="archive-nav_title">Вы находитесь в архиве. Код выше был актуален <time datetime="2026-06-17">17 июня 2026</time>.</span> 💡</p>
+            <p>💡 <span class="archive-nav_title">Вы находитесь в архиве. Код выше был актуален <time datetime="2026-06-19">19 июня 2026</time>.</span> 💡</p>
             <p>
                 <a href="../../../../index.html">
                     Перейти к актуальной версии сайта (современная верстка)
                 </a>
             </p>
             <p>🌠 <span class="archive-nav_title">Также вы можете продолжить исследование истории изменений.</span> 🌠</p>
-            <p><a href="../../../../archive/2026/june/16/index.html" class="archive-btn">← Предыдущий снапшот</a><a href="../../../../archive/2026/june/19/index.html" class="archive-btn">Следующий снапшот →</a></p>
+            <p><a href="../../../../archive/2026/june/17/index.html" class="archive-btn">← Предыдущий снапшот</a><a href="#" class="archive-btn disabled" aria-disabled="true">Следующий снапшот →</a></p>
         </nav>
     </footer>
 </body>
