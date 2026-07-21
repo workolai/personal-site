@@ -6,13 +6,13 @@
     <meta name="author" content="Николай Огрызков">
     <meta name="description" content="История развития сайта Николая Огрызкова по дням ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://workolai.com/history">
+    <meta name="robots" content="noindex, nofollow"> <!-- Добавляется во все снапшоты.-->
+    <!-- <link rel="icon" href="../../../../icon.jpg" type="image/jpeg"> — первая версия прикрепления иконки, которую я признал неэффективной из-за того, что её не видно при открытии картинок с сайта на новых вкладках-->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png">
     <link rel="manifest" href="/img/favicons/site.webmanifest">
-    <link rel="canonical" href="https://workolai.com/history">
     <link rel="stylesheet" href="style.css">
     <title>Развитие сайта</title>
 </head>
@@ -27,19 +27,16 @@
             <a href="history">Развитие сайта</a>
         </nav>
         <hr>
-        <details class="container navig">
+    </header>
+    <main>
+        <details>
             <summary>Навигация по странице</summary>
-            <nav aria-label="Навигация по странице">
+            <nav aria-label="primary_navigation">
                 <ul>
                     <li><a href="#why-created">Зачем была создана эта страничка??</a></li>
                     <li>
                         <a href="#learning-days">Обучение по дням?</a>
                         <ul>
-                            <li><a href="#day_14L">День14: внезапная возня с иконками, обновление структуры и вредные поисковые роботы</a></li>
-                            <li><a href="#day_13L">День 13: легендарное возвращение!</a></li>
-                            <li><a href="#day_12L">День 12: начало курса по CSS</a></li>
-                            <li><a href="#days-10to11L">Дни 10—11: ЕГЭ, завершение работы с кнопками и формами и ещё немного лоска с помощью CSS</a></li>
-                            <li><a href="#day_9L">День 9: кнопки, формы и прочие ужасы, которые за один раз не запомнишь…</a></li>
                             <li><a href="#days_5to8L">Дни 5—8: внезапная оптимизация картинок, первые шажки в CSS и ИИ</a></li>
                             <li><a href="#day_4L">День 4: таблицы и забота о здоровье</a></li>
                             <li> <a href="#days-123L">Дни 1, 2 и 3: первые потуги</a></li>
@@ -49,8 +46,6 @@
                 </ul>
             </nav>
         </details>
-    </header>
-    <main class="container">
         <h1>Развитие сайта</h1>
         <article id="why-created">
             <h2>Зачем была создана эта страничка?</h2>
@@ -60,246 +55,6 @@
 
         <section id="learning-days">
             <h2>Обучение по дням</h2>
-            <article id="day_14L">
-                <h3>День14: внезапная возня с иконками, обновление структуры и вредные поисковые роботы</h3>
-                <p class="pub_date">Дата публикации: <time datetime="2026-07-21">21 июля 2026</time></p>
-                <section>
-                    <h4>Та же инока, но другая</h4>
-                    <p>Всем пр-пр-патамим! (Да, у меня теперь такое приветствие не только в тиктоке, но и здесь. :ppp) Сегодня, сев работать над сайтом, я решил по нему пару раз пройтись. Открыв картинку в новой вкладке, выяснилось, что там иконка моего сайта не отображается! Проведя небольшой ресёрч, я обнаружил, что дело может быть в фавиконке, вернее сказать, в её отсутствии. До сегодняшнего дня в качестве иконки выступал файл icon.jpg. При указании оного через <code> &lt;link rel="icon" href="icon.jpg" type="image/jpeg"&gt;</code> в <code>head</code> каждого из HTML-файлов, он работал, но при открытии картинки (которая, вестимо, не имеет в себе никаких тегов) браузер обращается именно к <code>favicon.ico</code>. В итоге я организовал себе иконки с разными разрешениями: обычные для браузера, большие для девайсов Apple, большие для веб-приложений и классическая <code>favicon.ico</code> для всего остального. =) В конечном итоге в браузере она выглядит точно так же, но зато при открытии картинок будет иконка!! Правда, люди, которые захотят отсюда скачать картинку, вероятно, будут взбешены тем фактом, что я им пытаюсь подсунуть AVIF-файлы заместо привычных PNG и JPEG… но это уже совсем другая история.</p>
-                </section>
-                <section>
-                    <h4>Что там со структурой?</h4>
-                    <p>У меня на сайте реализована система архива; в коннце этой страницы вы можете найти кучу ссылку на снапшоты сайта в разные дни. По устройству это было устроено незамысловато: /archive/2026/june/01. Казалось бы, идеально! Но, создав папку july, стало понятно, что меня выводит из себя ситуация, когда в списке папок месяца идут не по порядку (угораздило букву <i>l</i> быть первее алфавите!), поэтому решил, что названия папок должны начинаться с номера месяца. О решении не жалею, но, как и с обновлением иконки, пришлось пришлось для этого каждый файл в архиве обновлять.&nbsp🥲 Зато теперь, если кто-то зайдёт на <a href="https://github.com/workolai/personal-site">гитхаб сайта</a>, то структура будет более понятной и симпатичной. 💅</p>
-                </section>
-                <section>
-                    <h4>Поисковые роботы? Это вообще что?</h4>
-                    <p>Это роботы гугла и яндекса, которые в случае чего выводят ссылку на сайт в поиске. :&gt; Чтобы они начали работать, нужно внести пару обновлений на сайте, на котором я арендовал хостинг — тут проблем не возникло. Зато спустя сутки я обнаружил, что Вебмастер (это яндексовский) считает, что у меня на сайте не настроено безопасное подключение, что просо не соответствовало действительности: у меня был сертификат от Let's Encrypt, и тот факт, что ваш браузер пустил вас сюда без предупреждения, является тому ярчайшим доказательством. Немного пораскинув мозгами и пошарившись по интерфейсу, стало понятно, что яндекс пытается добиться информации от http://workolai.com:80. Это незащищённое соединение, по которому у меня настроен редирект на защищённое. Кажется невероятной глупостью тот факт, что при добавлении домена в формате сайт.com яндекс по умолчанию склонен считать, что речь идёт ссылке с HTTP! Ну серьёзно, большой 26-й на дворе, рядовой пользователь через плашку с браузером об опасности соединения на такой сайт не проберётся. Вроде поставил галочку «Включить HTTPS», но стало неохота ждать, так что просто удалил workolai.com из Вебмастера и добавил httsp://workolai.com. Проверю завтра, какие жалобы будут уже на реальный сайт, а не на редирект. :p</p>
-                    <p>С нашей конторой сами-знаете-кого всё понятно, но гугловский робот тоже дал о себе знать (пусть уже и не в таком возмущающем меня ключе). До переезда на VDS мой сайт находился на GitHub Pages — это, грубо говоря, хостинг гитхаба, который позволяет держать статичные и незамысловатые сайты доступными для всех в интернете забесплатно. Штука отличная, но проблема в том, что, во-первых, пользователи не смогут отправлять тебе формы (это настраивается отдельно и костылями), во-вторых, по умолчанию у тебя всё на домене github.io, в-третьих, все абсолютные пути ломаются, потому что, очевидно, ты владеешь своим репозиторием, а не корнем github.io. В общем, я переехал на арендованные для сайта домен и VDS. Но страничку для своего сайта в Google Search Console (панелька, через которую владельцы сайтов могут следить за выдачей сайта поисковым роботом гугла) я создавал впервые, когда сайт был ещё на GitHub Pages. Сегодня чекаю URL в GSC, и появляется следующая картина:</p>
-                    <figure>
-                        <picture>
-                            <source type="image/avif" srcset="
-                            img/day_14/screenshot/screenshot-640.avif 640w,
-                            img/day_14/screenshot/screenshot-1200.avif 1200w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
-                            <source type="image/webp" srcset="
-                            img/day_14/screenshot/screenshot-640.webp 640w,
-                            img/day_14/screenshot/screenshot-1200.webp 1200w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
-                            <img src="img/day_14/screenshot/screenshot-fallback.jpg" width="1199" height="618" alt="Скриншот с информацией о главной ссылке на сайт на GSC" loading="lazy">
-                        </picture>
-                        <figcaption>Google Search Console</figcaption>
-                    </figure>
-                    <p>Понимаю, что для вас это какой-то ребус. Самая важная строчка здесь: Google-selected canonical: https://workolai.github.io/personal-site/. Прошлый домен с почти таким же содержанием попал в GSC раньше, и гугл видит, что он повторяет контент домена, который предлагается взять под контроль. Чтобы это исправить, нужно, по идее, добавить <code>&lt;link rel="canonical" href="https://workolai.com/"&gt;</code> и запросить индексирование потом у гугла. Проверим, сработает ли это.</p>
-                    <p>Вообще, учитывая, на каком уровне у меня сайт, навряд ли поиск будет его кому-то выдавать. Но когда и если решат искать именно моё имя, этот сайт в выдаче будет очень кстати, и я бы хотел присматривать за этими поисковыми роботами с самого начала. 👽</p>
-                </section>
-                <section>
-                    <h4>Пора бы начать вспоминать, кто такой этот ваш CSS</h4>
-                    <p>Из нового: я обновил фоновый цвет сайта! Также я посмотрел урок про разные меры в CSS (px, rem, em, % и так далее), но не смог придумать кейс, где можно будет это применить. Завтра, думаю, обязательно этот кейс найдётся. ;) Ну а пока я пойду заменять ссылки в архиве с учётом обновления структуры. 😩</p>
-                </section>
-            </article>
-            <article id="day_13L">
-                <h3>День 13: легендарное возвращение!</h3>
-                <p class="pub_date">Дата публикации: <time datetime="2026-07-20">20 июля 2026</time></p>
-                <section>
-                    <h4>А что случилось?</h4>
-                    <p>Я начал отдыхать и в итоге проотдыхал целый месяц. xDD Зато 150 подписчиков в тиктоке набрал! Как бы то ни было, возвращаться надо (рано или поздно). Сейчас буду немного как слепой котёнок, правда, но да ладно! Для начала, хотелось бы кратко обозначить, что успело произойти за время отсутствия:</p>
-                    <ul>
-                        <li>
-                            <b>Я получил аттестат и подал заявление в колледж</b>
-                            <p>С получением всех результатов экзаменов мне выдали обычный синий аттестат, в котором все оценки были отличными. Синий он был в связи с тем, что я не подтвердил свои знания на ЕГЭ. Выпускной прошёл спокойно, в кафе я со всеми не ходил — пьяные лица не жалую и хорошо себя в их окружении чувствовать не могу. =) Но я прошёл медкомиссию для колледжа (бо-о-же, никому не пожелаю улицезреть эти очереди!) и подал заявление на поступление в местный агротехнический колледж через госуслуги, прикрепив справку о здоровье, СНИЛС, аттестат и фотку. Поступление будет ещё 26 дней идти, но я на данный момент <a href="https://web.archive.org/web/20260720140916/https://docs.google.com/spreadsheets/d/e/2PACX-1vQTIFWOZtwb5EhK11mkiHY0IVhhliXZWdTLHMwadZHqz08vBXsL9GTPN_wFNtzti0RFXOCOt5rNa49d/pubhtml?gid=0&single=true&widget=true&headers=false">первый</a> по среднему баллу аттестата на интересующем меня направлении. Скоро нужно будет съездить и отдать им аттестат. ;)</p>
-                            <figure>
-                                <picture>
-                                    <source type="image/avif" srcset="
-                                    img/day_13/1/1-640.avif 640w,
-                                    img/day_13/1/1-1200.avif 1200w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
-                                    <source type="image/webp" srcset="
-                                    img/day_13/1/1-640.webp 640w,
-                                    img/day_13/1/1-1200.webp 1200w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
-                                    <img src="img/day_13/1/1-fallback.jpg" width="1152" height="1199" alt="Автор сайта в белой футболке смотрит в камеру на белов фоне" loading="lazy">
-                                </picture>
-                                <figcaption>Моя будущее фото в студенческом билете (сделал его на камеру телефона и подправил с помощью ИИ)</figcaption>
-                            </figure>
-                        </li>
-                        <li>
-                            <b>Я начал постить вертикальный контент</b>
-                            <p>Я добавил пару друзей из реально жизни в свой тикток, и внезапно о канале узнала куча ребят из школы. Я очень рад их поддержке, но иногда неловко в связи с этим бывает. 🥲 По большей части я сейчас пощу лайфстайл, но хотелось бы перейти всё же на постинг по веб-разработке.</p>
-                            <figure>
-                                <picture>
-                                    <source type="image/avif" srcset="
-                                    img/day_13/tiktok_screenshot/tiktok_screenshot-640.avif 640w,
-                                    img/day_13/tiktok_screenshot/tiktok_screenshot-1200.avif 1200w,
-                                    img/day_13/tiktok_screenshot/tiktok_screenshot-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
-                                    <source type="image/webp" srcset="
-                                    img/day_13/tiktok_screenshot/tiktok_screenshot-640.webp 640w,
-                                    img/day_13/tiktok_screenshot/tiktok_screenshot-1200.webp 1200w,
-                                    img/day_13/tiktok_screenshot/tiktok_screenshot-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
-                                    <img src="img/day_13/tiktok_screenshot/tiktok_screenshot-fallback.png" width="672" height="1200" alt="TikTok-аккаунт Николая огрызкова" loading="lazy">
-                                </picture>
-                                <figcaption>Мой TikTok</figcaption>
-                            </figure>
-                        </li>
-                        <li>
-                            <b>Я продал ПК и периферию</b>
-                            <p>Я наконец-то смог продать его! За 77 000 ₽ у меня ушли ПК, монитор и мышка с клавиатурой. На полученные деньги я купил себе стол с подъёмным механизмом, штуки для кабель-менеджмента, кучу уходовой косметики и игры в стиме.</p>
-                        </li>
-                    </ul>
-                </section>
-            </article>
-            <article id="day_12L">
-                <h3>День 12: начало курса по CSS</h3>
-                <p class="pub_date">Дата публикации: <time datetime="2026-06-30">30 июня 2026</time></p>
-                <section>
-                    <h4>А почему только день 12? Неужто отдыхал все остальные дни? 👀</h4>
-                    <p>Каюсь, друзья, отдыхал и бездельничал почти две недели! 😔✌️ Но сегодня возвращаюсь в строй с новой силой. Работать я буду с <a href="https://youtu.be/OXGznpKZ_sA?si=8_FPcsdlhE-5CsOV">курсом</a> по CSS на канале FreeCodeCamp от Дэйва Грэя, и идёт он (курс, не Дэйв) немногим больше 11 часов. Бо-о-оже, и что там 11 часов изучать можно?.. Как бы то ни было, разберусь, конечно, но масштаб внушительный на первый взгляд.</p>
-                    <p>Выглядеть всё это будет немного странно поначалу, поэтому те правила, которые я добавляю, чтобы выполнить задачу с курса, я буду помещать в конец своего CSS-файла, а теги, на которые эти новичковские попытки в CSS, будут влиять, все будут аккуратно обёрнуты в класс <code>experimental-css</code>. Что ж, работаем!</p>
-                    <p class="experimental-css">Таинственный цвет проник на мой сайт вместе со странного размера текстом!</p>
-                </section>
-            </article>
-            <article id="days-10to11L">
-                <h3>Дни 10—11: ЕГЭ, завершение работы с кнопками и формами и ещё немного лоска с помощью CSS</h3>
-                <p class="pub_date">Дата публикации: <time datetime="2026-06-19">19 июня 2026</time></p>
-                <section>
-                    <h4>Так что там с ЕГЭ?</h4>
-                    <p>С ЕГЭ всё отлично!</p>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Предмет</th>
-                                <th>Количество баллов</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Русский язык</td>
-                                <td>61</td>
-                            </tr>
-                            <tr>
-                                <td>Математика (профильная)</td>
-                                <td>58</td>
-                            </tr>
-                            <tr>
-                                <td>Информатика</td>
-                                <td>20*</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td colspan="2">* На момент написания статьи официального результата не было; но я сделал только 3 задания, и 20 — это самый лучший расклад. xD **</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">** Апдейт от <time datetime="2026-07-20">20 июля</time>: настоящий результат был 14 баллов 👽
-
-                                </td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                    <p>У некоторых может возникнуть справедливый вопрос: и как же это всё отлично, если информатика де-факто не сдана, а по другим двум предметам тоже мало баллов? Дело в том, что я иду в колледж и <strong>не иду в вуз</strong>. Мне нужен только аттестат, так что я не переживаю. В колледжах не спрашивают баллы ЕГЭ. 😝 Дальше мне нужно будет получить медицинское заключение для колледжа — 3517 ₽, на минуточку! — после чего смогу подавать документы.</p>
-                </section>
-                <section>
-                    <h4>Больше кнопок и форм богу кнопок и форм!</h4>
-                    <p>Да… возвращаемся к ВОТ ЭТИМ ВОТ. 😩</p>
-                    <form action="https://httpbin.org/get" method="get">
-                        <p>
-                            <label for="first_name">Имя</label>
-                            <input type="text" name="first_name" id="first_name" placeholder="Пётр" required>
-                        </p>
-                        <label for="sweetest-future" style="user-select: none;">Моё будущее по мнению некоторых взрослых:</label>
-                        <select name="sweetest-future" id="sweetest-future">
-                            <option value="Устроиться по знакомству">Устроиться по знакомству</option>
-                            <option value="Смерть в нищете" selected>Смерть в нищете</option>
-                            <option value="Работа дворником">Работа дворником</option>
-                            <option value="Сидеть на шее родителей до 30">Сидеть на шее родителей до 30</option>
-                            <option value="Позорить семью">Позорить семью</option>
-                        </select>
-                        <br><br>
-                        <fieldset>
-                            <legend>Какой ваш любимый язык программирования?</legend>
-                            <p>
-                                <input type="radio" name="programming_language" id="python" value="python">
-                                <label for="python">Python</label>
-                            </p>
-                            <p>
-                                <input type="radio" name="programming_language" id="c-plus-plus" value="c-plus-plus">
-                                <label for="c-plus-plus">C++</label>
-                            </p>
-                            <p>
-                                <input type="radio" name="programming_language" id="javascript" value="javascript">
-                                <label for="javascript">JavaScript</label>
-                            </p>
-                            <p>
-                                <input type="radio" name="programming_language" id="no-go-fys" value="no-go-fys">
-                                <label for="no-go-fys">Какой язык программирования? Сидите сами со своими компами разбирайтесь, ТУПЫЕ ТЕХНАРИ</label>
-                            </p>
-                        </fieldset>
-                        <br>
-                        <fieldset>
-                            <legend>Какие у вас любимые домашние питомцы?</legend>
-                            <p>
-                                <input type="checkbox" name="favorite_pets" id="dog" value="собачки">
-                                <label for="dog">Собачки</label>
-                            </p>
-                            <p>
-                                <input type="checkbox" name="favorite_pets" id="cat" value="котята">
-                                <label for="cat">Котята</label>
-                            </p>
-                            <p>
-                                <input type="checkbox" name="favorite_pets" id="chinchilla" value="шиншилла">
-                                <label for="chinchilla">Шиншиллы</label>
-                            </p>
-                            <p>
-                                <input type="checkbox" name="favorite_pets" id="rats" value="крыски">
-                                <label for="rats">Крыски</label>
-                            </p>
-                            <p>
-                                <input type="checkbox" name="favorite_pets" id="other" value="Другие">
-                                <label for="other">Другие</label>
-                            </p>
-                        </fieldset>
-                        <br>
-                        <fieldset>
-                            <legend>Напишите о своём свэге</legend>
-                            <label for="text-me">Мой свэг и его влияние на окружающих:</label>
-                            <br>
-                            <textarea name="text-me" id="text-me" rows="10" cols="50" placeholder="Я поел и полежал, и они все были в восторге или типа того"></textarea>
-                        </fieldset>
-                        <br>
-                        <button type="submit">Отправить нешифрованные результаты теста (и данные банковской карты)</button>
-                        <button type="reset">Обнулить всё</button>
-                    </form>
-                    <p>Бо-о-оже, это было ужасно! Пока запомнишь, как всё это работает, нужно будет это не один раз повторить. Впрочем, никто ничего не запоминает раз и навсегда; в пору интернета всегда есть возможность проверить и уточнить, верно? ;)</p>
-                </section>
-                <section>
-                    <h4>Обновление в CSS и немного в доступности</h4>
-                    <p>Сегодня я освоил <code>max-width</code>, <code>line-height</code>, <code>padding</code> и ещё некоторую красоту, которая позволила сделать сайт лучше. :&gt; Текст больше не растягивается на всю страницу, а аккуратно располагается в центре; также он стал побольше, а межстрочный интервал приобрёл более удобочитаемый вид. 🌸</p>
-                    <p>По доступности: прогнав свой сайт через Google Lighthouse, я понял, что в моментах, где я даю описание картинок и ссылки на страницы картинок в Pexels, люди со скринридерами получают набор ссылок, которые звучат абсолютно одинаково. (Они слышат что-то вроде «копирайт, [имя сделавших фотографию] на „ссылка: Pexels“». Получается какая-то каша: предлог «на» смешивается со словом «ссылка», а слово Pexels не даёт много информации.) Было придумано изящное и более корректное с точки зрения семантики решение: у тега <code>&lt;a&gt;</code> можно задавать название с помощью <code>aria-label</code>. Теперь человек будет слышать «копирайт, [имя сделавших фотографию]; „ссылка: Часовня тишины на Pexels“». Предлог «на» я убрал от людей без скринридеров, заменив его на длинное тире — выглядит оно даже более профессионально. B)</p>
-                </section>
-            </article>
-            <article id="day_9L">
-                <h3>День 9: кнопки, формы и прочие ужасы, которые за один раз не запомнишь…</h3>
-                <p class="pub_date">Дата публикации: <time datetime="2026-06-17">17 июня 2026</time></p>
-                <section>
-                    <h4>Кнопки и формы (будь они неладны!)</h4>
-                    <p>Всех приветствую! Хотелось бы выйти на режим ежедневных коммитов (мечтать не вредно! 😝), поэтому активно учусь дальше.</p>
-                    <p>Сегодня, после наведения финального лоска в CSS — да, Джеминай мне всё предлагает и предлагает кучу симпатичного, а я всё не против и не против, — я наконец-то возвращаюсь к <a href="https://youtu.be/kUMe1FH4CHE?si=kcSnhxOxJ3-o9WDm">курсу</a> от FreeCodeCamp по HTML! Следующая тема… о-о-ой, формы и кнопки… Я помню, как я был поражён количеству полученной информации, когда у меня была первая и менее публичная попытка в веб-разработку с <a href="https://youtu.be/HGTJBPNC-Gw?si=sgWoscCLTNhJV2VG">курсом</a> уже от BroCode. Надеюсь, в этот раз будет попроще. Хотя длина этого урока на таймлайне не вызывает доверия. 🥲 Попробуем?..</p>
-                    <form action="https://httpbin.org/get" method="get">
-                        <p><label for="nickname">Никнейм</label>
-                            <input type="text" name="nickname" id="nickname" placeholder="alexBigSmoke" autocomplete="on" required>
-                        </p>
-                        <p>
-                            <label for="password">Пароль</label>
-                            <input type="password" name="password" id="password" placeholder="*засекречено*" required>
-                        </p>
-                        <p>
-                            <label for="phone">Телефон</label>
-                            <input type="tel" name="phone" id="phone" placeholder="9999999999" pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}" autocomplete="on">
-                        </p>
-                        <p>
-                            <label for="number">Количество</label>
-                            <input type="number" name="number" id="number" min="1" max="100" value="67">
-                        </p>
-                    </form>
-                    <p><strong>Важное примечание: все формы липовые и мне не приходят на данный момент!</strong></p>
-                    <p>Окей, чат, завтра мне на экзамен последний (конечно, я ничего не знаю и ничего не напишу), так что пойду уже спать. <code>git push origin main</code> и до завтра! 🍓</p>
-                </section>
-            </article>
             <article id="days_5to8L">
                 <h3>Дни 5—8: внезапная оптимизация картинок, первые шажки в CSS и ИИ</h3>
                 <p class="pub_date">Дата публикации: <time datetime="2026-06-16">16 июня 2026</time></p>
@@ -323,7 +78,7 @@
                         Когда сделаешь первый макет и увидишь что картинка на мобильном занимает 480px, а на десктопе 1200px — вот тогда приходи, добавим за пять минут.
                     </p>
                     <p>Впервые ИИ мне отказал! Дальше я всё же смог его убедить мне помочь, сказав, что у меня уже есть несколько страниц, но это было интересно. А отказ, если честно, по делу. Как бы то ни было, теперь у меня есть скрипт, который при первом запуске спрашивает, в где хранится директория img, а при втором уточняет, в какую поддиректорию загружать конкретные файлы. Дальше он спрашивает, насколько агрессивную стратегию сжатия использовать; после этого он делает своё дело, сохраняя в директорию /original оригинал изображения, а на директорию выше кидает 7 файлов (каждый меньше 250 КиБ): AVIF и WEBP для экранов смартфонов (640 px), для экранов маленьких ноутбуков и планшетов (1200 px) и для десктопа (1920 px) и JPEG (чтобы в случае чего загрузилось даже на древнейших девайсах), давая в терминале сразу вывод для HTML-файла.</p>
-                    <p>Раз уж такое дело, неудобно будет не разместить прямо здесь эти картинки! (Заодно взгляну, как сделать так, чтобы картинки занимали не пол-экрана.)</p>
+                    <p>Раз уж такое дело, неудобно будет не разместить прямо здесь эти картинки! (За одно взгляну, как сделать так, чтобы картинки занимали не пол-экрана.)</p>
                     <p>Места, которые мне бы хотелось посетить:</p>
                     <ul>
                         <li>
@@ -331,17 +86,17 @@
                             <figure>
                                 <picture>
                                     <source type="image/avif" srcset="
-                                    img/day_1/helsinki000/helsinki000-640.avif 640w,
-                                    img/day_1/helsinki000/helsinki000-1200.avif 1200w,
-                                    img/day_1/helsinki000/helsinki000-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                /img/day_1/helsinki000/helsinki000-640.avif 640w,
+                                /img/day_1/helsinki000/helsinki000-1200.avif 1200w,
+                                /img/day_1/helsinki000/helsinki000-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
                                     <source type="image/webp" srcset="
-                                    img/day_1/helsinki000/helsinki000-640.webp 640w,
-                                    img/day_1/helsinki000/helsinki000-1200.webp 1200w,
-                                    img/day_1/helsinki000/helsinki000-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
-                                    <img src="img/day_1/helsinki000/helsinki000-fallback.jpg" width="1200" height="1200" alt="Снежный вид на часовню тишины Камппи в Хельсинки, демонстрирующий современную архитектуру в зимней обстановке" loading="lazy">
+                                /img/day_1/helsinki000/helsinki000-640.webp 640w,
+                                /img/day_1/helsinki000/helsinki000-1200.webp 1200w,
+                                /img/day_1/helsinki000/helsinki000-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    <img src=/img/day_1/helsinki000/helsinki000-fallback.jpg" width="1200" height="1200" alt="Снежный вид на часовню тишины Камппи в Хельсинки, демонстрирующий современную архитектуру в зимней обстановке" loading="lazy">
                                 </picture>
                                 <figcaption>Хельсинки, Уусимаа, Финляндия <br>
-                                    &copy; Ivan Dražić — <a href="https://www.pexels.com/photo/kamppi-chapel-in-winter-helsinki-finland-35816064/" target="_blank" rel="noopener" aria-label="Часовня тишины на Pexels">Pexels</a>
+                                    &copy;Ivan Dražić на <a href="https://www.pexels.com/photo/kamppi-chapel-in-winter-helsinki-finland-35816064/" target="_blank" rel="noopener">Pexels</a>
                                 </figcaption>
                             </figure>
                         </li>
@@ -350,18 +105,18 @@
                             <figure>
                                 <picture>
                                     <source type="image/avif" srcset="
-                                    img/day_1/berlin000/berlin000-640.avif 640w,
-                                    img/day_1/berlin000/berlin000-1200.avif 1200w,
-                                    img/day_1/berlin000/berlin000-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    /img/day_1/berlin000/berlin000-640.avif 640w,
+                                    /img/day_1/berlin000/berlin000-1200.avif 1200w,
+                                    /img/day_1/berlin000/berlin000-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
                                     <source type="image/webp" srcset="
-                                    img/day_1/berlin000/berlin000-640.webp 640w,
-                                    img/day_1/berlin000/berlin000-1200.webp 1200w,
-                                    img/day_1/berlin000/berlin000-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
-                                    <img src="img/day_1/berlin000/berlin000-fallback.jpg" width="900" height="1200" alt="Трамваи на городской улице Берлина с заревом заката, демонстрирующие городскую жизнь и современную архитектуру" loading="lazy">
+                                    /img/day_1/berlin000/berlin000-640.webp 640w,
+                                    /img/day_1/berlin000/berlin000-1200.webp 1200w,
+                                    /img/day_1/berlin000/berlin000-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    <img src="/img/day_1/berlin000/berlin000-fallback.jpg" width="900" height="1200" alt="Трамваи на городской улице Берлина с заревом заката, демонстрирующие городскую жизнь и современную архитектуру" loading="lazy">
                                 </picture>
                                 <figcaption>
                                     Берлин, Германия <br>
-                                    &copy; Niklas Jeromin — <a href="https://www.pexels.com/photo/urban-trams-at-sunset-in-berlin-street-scene-34611601/" target="_blank" rel="noopener" aria-label="Берлинский пейзаж на Pexels">Pexels</a>
+                                    &copy; Niklas Jeromin на <a href="https://www.pexels.com/photo/urban-trams-at-sunset-in-berlin-street-scene-34611601/" target="_blank" rel="noopener">Pexels</a>
                                 </figcaption>
                             </figure>
                         </li>
@@ -370,18 +125,19 @@
                             <figure>
                                 <picture>
                                     <source type="image/avif" srcset="
-                                    img/day_1/akihabara000/akihabara000-640.avif 640w,
-                                    img/day_1/akihabara000/akihabara000-1200.avif 1200w,
-                                    img/day_1/akihabara000/akihabara000-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    /img/day_1/akihabara000/akihabara000-640.avif 640w,
+                                    /img/day_1/akihabara000/akihabara000-1200.avif 1200w,
+                                    /img/day_1/akihabara000/akihabara000-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
                                     <source type="image/webp" srcset="
-                                    img/day_1/akihabara000/akihabara000-640.webp 640w,
-                                    img/day_1/akihabara000/akihabara000-1200.webp 1200w,
-                                    img/day_1/akihabara000/akihabara000-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
-                                    <img src="img/day_1/akihabara000/akihabara000-fallback.jpg" width="900" height="1200" alt="Яркая ночь в Акихабаре, Токио, с неоновыми огнями, рекламными щитами и уличной жизнью" loading="lazy">
+                                    /img/day_1/akihabara000/akihabara000-640.webp 640w,
+                                    /img/day_1/akihabara000/akihabara000-1200.webp 1200w,
+                                    /img/day_1/akihabara000/akihabara000-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    <img src="/img/day_1/akihabara000/akihabara000-fallback.jpg" width="900" height="1200" alt="Яркая ночь в Акихабаре, Токио, с неоновыми огнями, рекламными щитами и уличной жизнью" loading="lazy">
                                 </picture>
                                 <figcaption>Акихабара, Токио, Япония <br>
-                                    &copy; Şiyar AKBALIK — <a href="https://www.pexels.com/photo/vibrant-nightlife-in-akihabara-tokyo-35589758/" target="_blank" rel="noopener" aria-label="Ночная Акихабара на Pexels">Pexels</a></figcaption>
+                                    &copy; Şiyar AKBALIK на <a href="https://www.pexels.com/photo/vibrant-nightlife-in-akihabara-tokyo-35589758/" target="_blank" rel="noopener">Pexels</a></figcaption>
                             </figure>
+                            Яркая ночь в Акихабаре, Токио, с неоновыми огнями, рекламными щитами и уличной жизнью
                         </li>
                     </ul>
                     <p>Делюсь не без удовольствия кодом прямо здесь. 💫 (Надеюсь, меня не загрызут люди, которые, не знаю, стояли за созданием bash… кто знает, кто среди читателей будет? Как бы то ни было, это вайб-кодинг — не судите строго. 😝)</p>
@@ -825,22 +581,28 @@ echo "=== Все картинки обработаны параллельно и
             <h2>Снапшоты сайта по дням</h2>
             <ul>
                 <li><a href="/archive/2026/06_june/01/index">День 1</a></li>
-                <li><a href="archive/2026/06_june/02/index">День 2</a></li>
-                <li><a href="archive/2026/06_june/03/index">День 3</a></li>
-                <li><a href="archive/2026/06_june/12/index">День 4</a>, <time datetime="2026-06-12">12 июня 2026</time></li>
-                <li><a href="archive/2026/06_june/16/index">Дни 5—8</a>, <time datetime="2026-06-16">16 июня 2026</time></li>
-                <li><a href="archive/2026/06_june/17/index">День 9</a>, <time datetime="2026-06-16">17 июня 2026</time></li>
-                <li><a href="archive/2026/06_june/19/index">Дни 10—11</a>, <time datetime="2026-06-19">19 июня 2026</time></li>
-                <li><a href="archive/2026/07_july/20/index">День 13</a>, <time datetime="2026-07-20">20 июля 2026</time></li>
+                <li><a href="/archive/2026/06_june/02/index">День 2</a></li>
+                <li><a href="/archive/2026/06_june/03/index">День 3</a></li>
+                <li><a href="/archive/2026/06_june/12/index">День 4</a>, <time datetime="2026-06-12">12 июня, 2026</time></li>
             </ul>
         </section>
+        <hr>
     </main>
     <footer>
-        <hr>
         <p>© Copyleft — все права развращены!</p>
         <p>Сайт распространяется по лицензии <a href="https://www.gnu.org/licenses/agpl-3.0.ru.html">AGPLv3</a>. Код доступен на <a href="https://github.com/workolai/personal-site">GitHub</a>.</p>
         <p>Николай Огрызков</p>
         <p>2026</p>
+        <nav class="archive-nav">
+            <p>💡 <span class="archive-nav_title">Вы находитесь в архиве. Код выше был актуален <time datetime="2026-06-16">16 июня 2026</time>.</span> 💡</p>
+            <p>
+                <a href="/history">
+                    Перейти к актуальной версии сайта (современная верстка)
+                </a>
+            </p>
+            <p>🌠 <span class="archive-nav_title">Также вы можете продолжить исследование истории изменений.</span> 🌠</p>
+            <p><a href="/archive/2026/06_june/12/history" class="archive-btn">← Предыдущий снапшот</a><a href="/archive/2026/06_june/17/history" class="archive-btn">Следующий снапшот →</a></p>
+        </nav>
     </footer>
 </body>
 

@@ -1,7 +1,7 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 19px;
-    background-color: aliceblue;
+    background-color: papayawhip;
 }
 
 a {
@@ -81,7 +81,7 @@ form p {
 }
 
 .dialogue {
-    border: 2px solid #9d9d9d;
+    border: 2px solid #eee;
     padding: 30px 20px;
 }
 
@@ -90,7 +90,7 @@ tr,
 th,
 td,
 caption {
-    border: 1px solid #9d9d9d;
+    border: 1px solid #eee;
     border-collapse: collapse;
     padding: 0.5rem;
 }
