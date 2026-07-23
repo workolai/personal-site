@@ -22,7 +22,7 @@
         <p id="site-title">Личный и рабочий блог Николая Огрызкова</p>
         <hr>
         <nav class="header-urls">
-            <a href="index">Главная</a>
+            <a href="./">Главная</a>
             <a href="about">Обо мне</a>
             <a href="history">Развитие сайта</a>
         </nav>
@@ -35,6 +35,7 @@
                     <li>
                         <a href="#learning-days">Обучение по дням?</a>
                         <ul>
+                            <li><a href="#day_15L">День 15: у меня выдались сложные сутки</a></li>
                             <li><a href="#day_14L">День14: внезапная возня с иконками, обновление структуры и вредные поисковые роботы</a></li>
                             <li><a href="#day_13L">День 13: легендарное возвращение!</a></li>
                             <li><a href="#day_12L">День 12: начало курса по CSS</a></li>
@@ -60,30 +61,36 @@
 
         <section id="learning-days">
             <h2>Обучение по дням</h2>
+            <article id="day_15L">
+                <h3>День 15: у меня выдались сложные сутки</h3>
+                <p class="pub_date">Дата публикации: <time datetime="2026-07-23"> 23 июля 2026</time></p>
+                <p>Всем пр-пр-патамим! Вчера и позавчера я возился с новым столом и потом убирался за собой. В итоге я сначала не лёг, потом вырубился в <time datetime="10:00">10</time> часов примерно и проснулся в <time datetime="13:00"> 13</time>. В общем, сегодня не до кода; зато у меня стол с подъёмным механизмом и идеальный кабель-менеджмент под ним!</p>
+                <p>Хотя я сделал пару косметических изменений в виде создания чуть более красивых ссылок в архиве и исправления очевидных опечаток, о которых мне любезно сообщила мью в одной из соцсетей. 😶‍🌫️</p>
+            </article>
             <article id="day_14L">
-                <h3>День14: внезапная возня с иконками, обновление структуры и вредные поисковые роботы</h3>
+                <h3>День 14: внезапная возня с иконками, обновление структуры и вредные поисковые роботы</h3>
                 <p class="pub_date">Дата публикации: <time datetime="2026-07-21">21 июля 2026</time></p>
                 <section>
-                    <h4>Та же инока, но другая</h4>
+                    <h4>Та же иконка, но другая</h4>
                     <p>Всем пр-пр-патамим! (Да, у меня теперь такое приветствие не только в тиктоке, но и здесь. :ppp) Сегодня, сев работать над сайтом, я решил по нему пару раз пройтись. Открыв картинку в новой вкладке, выяснилось, что там иконка моего сайта не отображается! Проведя небольшой ресёрч, я обнаружил, что дело может быть в фавиконке, вернее сказать, в её отсутствии. До сегодняшнего дня в качестве иконки выступал файл icon.jpg. При указании оного через <code> &lt;link rel="icon" href="icon.jpg" type="image/jpeg"&gt;</code> в <code>head</code> каждого из HTML-файлов, он работал, но при открытии картинки (которая, вестимо, не имеет в себе никаких тегов) браузер обращается именно к <code>favicon.ico</code>. В итоге я организовал себе иконки с разными разрешениями: обычные для браузера, большие для девайсов Apple, большие для веб-приложений и классическая <code>favicon.ico</code> для всего остального. =) В конечном итоге в браузере она выглядит точно так же, но зато при открытии картинок будет иконка!! Правда, люди, которые захотят отсюда скачать картинку, вероятно, будут взбешены тем фактом, что я им пытаюсь подсунуть AVIF-файлы заместо привычных PNG и JPEG… но это уже совсем другая история.</p>
                 </section>
                 <section>
                     <h4>Что там со структурой?</h4>
-                    <p>У меня на сайте реализована система архива; в коннце этой страницы вы можете найти кучу ссылку на снапшоты сайта в разные дни. По устройству это было устроено незамысловато: /archive/2026/june/01. Казалось бы, идеально! Но, создав папку july, стало понятно, что меня выводит из себя ситуация, когда в списке папок месяца идут не по порядку (угораздило букву <i>l</i> быть первее алфавите!), поэтому решил, что названия папок должны начинаться с номера месяца. О решении не жалею, но, как и с обновлением иконки, пришлось пришлось для этого каждый файл в архиве обновлять.&nbsp🥲 Зато теперь, если кто-то зайдёт на <a href="https://github.com/workolai/personal-site">гитхаб сайта</a>, то структура будет более понятной и симпатичной. 💅</p>
+                    <p>У меня на сайте реализована система архива; в конце этой страницы вы можете найти кучу ссылку на снапшоты сайта в разные дни. По устройству это было устроено незамысловато: /archive/2026/june/01. Казалось бы, идеально! Но, создав папку july, стало понятно, что меня выводит из себя ситуация, когда в списке папок месяца идут не по порядку (угораздило букву <i>l</i> быть первее алфавите!), поэтому решил, что названия папок должны начинаться с номера месяца. О решении не жалею, но, как и с обновлением иконки, пришлось пришлось для этого каждый файл в архиве обновлять.&nbsp🥲 Зато теперь, если кто-то зайдёт на <a href="https://github.com/workolai/personal-site">гитхаб сайта</a>, то структура будет более понятной и симпатичной. 💅</p>
                 </section>
                 <section>
                     <h4>Поисковые роботы? Это вообще что?</h4>
-                    <p>Это роботы гугла и яндекса, которые в случае чего выводят ссылку на сайт в поиске. :&gt; Чтобы они начали работать, нужно внести пару обновлений на сайте, на котором я арендовал хостинг — тут проблем не возникло. Зато спустя сутки я обнаружил, что Вебмастер (это яндексовский) считает, что у меня на сайте не настроено безопасное подключение, что просо не соответствовало действительности: у меня был сертификат от Let's Encrypt, и тот факт, что ваш браузер пустил вас сюда без предупреждения, является тому ярчайшим доказательством. Немного пораскинув мозгами и пошарившись по интерфейсу, стало понятно, что яндекс пытается добиться информации от http://workolai.com:80. Это незащищённое соединение, по которому у меня настроен редирект на защищённое. Кажется невероятной глупостью тот факт, что при добавлении домена в формате сайт.com яндекс по умолчанию склонен считать, что речь идёт ссылке с HTTP! Ну серьёзно, большой 26-й на дворе, рядовой пользователь через плашку с браузером об опасности соединения на такой сайт не проберётся. Вроде поставил галочку «Включить HTTPS», но стало неохота ждать, так что просто удалил workolai.com из Вебмастера и добавил httsp://workolai.com. Проверю завтра, какие жалобы будут уже на реальный сайт, а не на редирект. :p</p>
+                    <p>Это роботы гугла и яндекса, которые в случае чего выводят ссылку на сайт в поиске. :&gt; Чтобы они начали работать, нужно внести пару обновлений на сайте, на котором я арендовал хостинг — тут проблем не возникло. Зато спустя сутки я обнаружил, что Вебмастер (это яндексовский) считает, что у меня на сайте не настроено безопасное подключение, что просо не соответствовало действительности: у меня был сертификат от Let's Encrypt, и тот факт, что ваш браузер пустил вас сюда без предупреждения, является тому ярчайшим доказательством. Немного пораскинув мозгами и пошарившись по интерфейсу, стало понятно, что яндекс пытается добиться информации от http://workolai.com:80. Это незащищённое соединение, по которому у меня настроен редирект на защищённое. Кажется невероятной глупостью тот факт, что при добавлении домена в формате сайт.com яндекс по умолчанию склонен считать, что речь идёт ссылке с HTTP! Ну серьёзно, большой 26-й на дворе, рядовой пользователь через плашку с браузером об опасности соединения на такой сайт не проберётся. Вроде поставил галочку «Включить HTTPS», но стало неохота ждать, так что просто удалил workolai.com из Вебмастера и добавил https://workolai.com. Проверю завтра, какие жалобы будут уже на реальный сайт, а не на редирект. :p</p>
                     <p>С нашей конторой сами-знаете-кого всё понятно, но гугловский робот тоже дал о себе знать (пусть уже и не в таком возмущающем меня ключе). До переезда на VDS мой сайт находился на GitHub Pages — это, грубо говоря, хостинг гитхаба, который позволяет держать статичные и незамысловатые сайты доступными для всех в интернете забесплатно. Штука отличная, но проблема в том, что, во-первых, пользователи не смогут отправлять тебе формы (это настраивается отдельно и костылями), во-вторых, по умолчанию у тебя всё на домене github.io, в-третьих, все абсолютные пути ломаются, потому что, очевидно, ты владеешь своим репозиторием, а не корнем github.io. В общем, я переехал на арендованные для сайта домен и VDS. Но страничку для своего сайта в Google Search Console (панелька, через которую владельцы сайтов могут следить за выдачей сайта поисковым роботом гугла) я создавал впервые, когда сайт был ещё на GitHub Pages. Сегодня чекаю URL в GSC, и появляется следующая картина:</p>
                     <figure>
                         <picture>
                             <source type="image/avif" srcset="
-                            img/day_14/screenshot/screenshot-640.avif 640w,
-                            img/day_14/screenshot/screenshot-1200.avif 1200w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                            /img/day_14/screenshot/screenshot-640.avif 640w,
+                            /img/day_14/screenshot/screenshot-1200.avif 1200w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
                             <source type="image/webp" srcset="
-                            img/day_14/screenshot/screenshot-640.webp 640w,
-                            img/day_14/screenshot/screenshot-1200.webp 1200w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
-                            <img src="img/day_14/screenshot/screenshot-fallback.jpg" width="1199" height="618" alt="Скриншот с информацией о главной ссылке на сайт на GSC" loading="lazy">
+                            /img/day_14/screenshot/screenshot-640.webp 640w,
+                            /img/day_14/screenshot/screenshot-1200.webp 1200w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                            <img src="/img/day_14/screenshot/screenshot-fallback.jpg" width="1199" height="618" alt="Скриншот с информацией о главной ссылке на сайт на GSC" loading="lazy">
                         </picture>
                         <figcaption>Google Search Console</figcaption>
                     </figure>
@@ -108,12 +115,12 @@
                             <figure>
                                 <picture>
                                     <source type="image/avif" srcset="
-                                    img/day_13/1/1-640.avif 640w,
-                                    img/day_13/1/1-1200.avif 1200w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    /img/day_13/1/1-640.avif 640w,
+                                    /img/day_13/1/1-1200.avif 1200w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
                                     <source type="image/webp" srcset="
-                                    img/day_13/1/1-640.webp 640w,
-                                    img/day_13/1/1-1200.webp 1200w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
-                                    <img src="img/day_13/1/1-fallback.jpg" width="1152" height="1199" alt="Автор сайта в белой футболке смотрит в камеру на белов фоне" loading="lazy">
+                                    /img/day_13/1/1-640.webp 640w,
+                                    /img/day_13/1/1-1200.webp 1200w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    <img src="/img/day_13/1/1-fallback.jpg" width="1152" height="1199" alt="Автор сайта в белой футболке смотрит в камеру на белов фоне" loading="lazy">
                                 </picture>
                                 <figcaption>Моя будущее фото в студенческом билете (сделал его на камеру телефона и подправил с помощью ИИ)</figcaption>
                             </figure>
@@ -124,14 +131,14 @@
                             <figure>
                                 <picture>
                                     <source type="image/avif" srcset="
-                                    img/day_13/tiktok_screenshot/tiktok_screenshot-640.avif 640w,
-                                    img/day_13/tiktok_screenshot/tiktok_screenshot-1200.avif 1200w,
-                                    img/day_13/tiktok_screenshot/tiktok_screenshot-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    /img/day_13/tiktok_screenshot/tiktok_screenshot-640.avif 640w,
+                                    /img/day_13/tiktok_screenshot/tiktok_screenshot-1200.avif 1200w,
+                                    /img/day_13/tiktok_screenshot/tiktok_screenshot-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
                                     <source type="image/webp" srcset="
-                                    img/day_13/tiktok_screenshot/tiktok_screenshot-640.webp 640w,
-                                    img/day_13/tiktok_screenshot/tiktok_screenshot-1200.webp 1200w,
-                                    img/day_13/tiktok_screenshot/tiktok_screenshot-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
-                                    <img src="img/day_13/tiktok_screenshot/tiktok_screenshot-fallback.png" width="672" height="1200" alt="TikTok-аккаунт Николая огрызкова" loading="lazy">
+                                    /img/day_13/tiktok_screenshot/tiktok_screenshot-640.webp 640w,
+                                    /img/day_13/tiktok_screenshot/tiktok_screenshot-1200.webp 1200w,
+                                    /img/day_13/tiktok_screenshot/tiktok_screenshot-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    <img src="/img/day_13/tiktok_screenshot/tiktok_screenshot-fallback.png" width="672" height="1200" alt="TikTok-аккаунт Николая огрызкова" loading="lazy">
                                 </picture>
                                 <figcaption>Мой TikTok</figcaption>
                             </figure>
@@ -331,14 +338,14 @@
                             <figure>
                                 <picture>
                                     <source type="image/avif" srcset="
-                                    img/day_1/helsinki000/helsinki000-640.avif 640w,
-                                    img/day_1/helsinki000/helsinki000-1200.avif 1200w,
-                                    img/day_1/helsinki000/helsinki000-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    /img/day_1/helsinki000/helsinki000-640.avif 640w,
+                                    /img/day_1/helsinki000/helsinki000-1200.avif 1200w,
+                                    /img/day_1/helsinki000/helsinki000-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
                                     <source type="image/webp" srcset="
-                                    img/day_1/helsinki000/helsinki000-640.webp 640w,
-                                    img/day_1/helsinki000/helsinki000-1200.webp 1200w,
-                                    img/day_1/helsinki000/helsinki000-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
-                                    <img src="img/day_1/helsinki000/helsinki000-fallback.jpg" width="1200" height="1200" alt="Снежный вид на часовню тишины Камппи в Хельсинки, демонстрирующий современную архитектуру в зимней обстановке" loading="lazy">
+                                    /img/day_1/helsinki000/helsinki000-640.webp 640w,
+                                    /img/day_1/helsinki000/helsinki000-1200.webp 1200w,
+                                    /img/day_1/helsinki000/helsinki000-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    <img src="/img/day_1/helsinki000/helsinki000-fallback.jpg" width="1200" height="1200" alt="Снежный вид на часовню тишины Камппи в Хельсинки, демонстрирующий современную архитектуру в зимней обстановке" loading="lazy">
                                 </picture>
                                 <figcaption>Хельсинки, Уусимаа, Финляндия <br>
                                     &copy; Ivan Dražić — <a href="https://www.pexels.com/photo/kamppi-chapel-in-winter-helsinki-finland-35816064/" target="_blank" rel="noopener" aria-label="Часовня тишины на Pexels">Pexels</a>
@@ -350,14 +357,14 @@
                             <figure>
                                 <picture>
                                     <source type="image/avif" srcset="
-                                    img/day_1/berlin000/berlin000-640.avif 640w,
-                                    img/day_1/berlin000/berlin000-1200.avif 1200w,
-                                    img/day_1/berlin000/berlin000-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    /img/day_1/berlin000/berlin000-640.avif 640w,
+                                    /img/day_1/berlin000/berlin000-1200.avif 1200w,
+                                    /img/day_1/berlin000/berlin000-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
                                     <source type="image/webp" srcset="
-                                    img/day_1/berlin000/berlin000-640.webp 640w,
-                                    img/day_1/berlin000/berlin000-1200.webp 1200w,
-                                    img/day_1/berlin000/berlin000-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
-                                    <img src="img/day_1/berlin000/berlin000-fallback.jpg" width="900" height="1200" alt="Трамваи на городской улице Берлина с заревом заката, демонстрирующие городскую жизнь и современную архитектуру" loading="lazy">
+                                    /img/day_1/berlin000/berlin000-640.webp 640w,
+                                    /img/day_1/berlin000/berlin000-1200.webp 1200w,
+                                    /img/day_1/berlin000/berlin000-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    <img src="/img/day_1/berlin000/berlin000-fallback.jpg" width="900" height="1200" alt="Трамваи на городской улице Берлина с заревом заката, демонстрирующие городскую жизнь и современную архитектуру" loading="lazy">
                                 </picture>
                                 <figcaption>
                                     Берлин, Германия <br>
@@ -370,14 +377,14 @@
                             <figure>
                                 <picture>
                                     <source type="image/avif" srcset="
-                                    img/day_1/akihabara000/akihabara000-640.avif 640w,
-                                    img/day_1/akihabara000/akihabara000-1200.avif 1200w,
-                                    img/day_1/akihabara000/akihabara000-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    /img/day_1/akihabara000/akihabara000-640.avif 640w,
+                                    /img/day_1/akihabara000/akihabara000-1200.avif 1200w,
+                                    /img/day_1/akihabara000/akihabara000-1920.avif 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
                                     <source type="image/webp" srcset="
-                                    img/day_1/akihabara000/akihabara000-640.webp 640w,
-                                    img/day_1/akihabara000/akihabara000-1200.webp 1200w,
-                                    img/day_1/akihabara000/akihabara000-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
-                                    <img src="img/day_1/akihabara000/akihabara000-fallback.jpg" width="900" height="1200" alt="Яркая ночь в Акихабаре, Токио, с неоновыми огнями, рекламными щитами и уличной жизнью" loading="lazy">
+                                    /img/day_1/akihabara000/akihabara000-640.webp 640w,
+                                    /img/day_1/akihabara000/akihabara000-1200.webp 1200w,
+                                    /img/day_1/akihabara000/akihabara000-1920.webp 1920w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 1200px">
+                                    <img src="/img/day_1/akihabara000/akihabara000-fallback.jpg" width="900" height="1200" alt="Яркая ночь в Акихабаре, Токио, с неоновыми огнями, рекламными щитами и уличной жизнью" loading="lazy">
                                 </picture>
                                 <figcaption>Акихабара, Токио, Япония <br>
                                     &copy; Şiyar AKBALIK — <a href="https://www.pexels.com/photo/vibrant-nightlife-in-akihabara-tokyo-35589758/" target="_blank" rel="noopener" aria-label="Ночная Акихабара на Pexels">Pexels</a></figcaption>
@@ -813,7 +820,7 @@ echo "=== Все картинки обработаны параллельно и
                             <p>Тут, пожалуй, самое сложное… В процессе работы перед экраном надо не забывать моргать. У меня это получается не очень хорошо, ведь я часто фокусируюсь на том, что делаю, а не на моргании. Мне есть куда расти!</p>
                         </li>
                     </ul>
-                    <p>Дальше можно поговорить о здоровье рук, и тут будет полезное предоставить некоторую историю. В период с <time datetime="2020">2020</time> по <time datetime="2022">2022</time> я любил проводить время в ритм-игре osu!, где нужно было одной рукой наводиться стилусом на кружочки и другой рукой жать две кнопки (всё это под отличную музыку). Как иногда бывает, я делал это очень неаккуратно: сильно прижимал запястья к столу, неправильно держал стилус (да, бывают разные хваты, и я выбрал один из самых неэргономичных). В итоге у меня начали болеть запястья, и я оставил игру. Потом боль почти полностью исчезла и достигла едва заметного плато, которое я не хочу ухудшать. Сейчас у меня есть сплит-клавиатура со встроенным трекболом и на крайние случаи вертикальная мышь. Эти девайсы сами по себе ставят запястья в куда более естественное положение, но, очевидно, чтобы сократить потенциальные разминки, рекомендуется делать разминки. Раз в час я обращаюсь к популярной в осу-сообществе <a href="https://youtu.be/H6y0D_8kRoU">видеоинструкции</a> от Tykato Fitness. Удачи мне; надеюсь, не заброшу эту историю. :')</p>
+                <p>Дальше можно поговорить о здоровье рук, и тут будет полезное предоставить некоторую историю. В период с <time datetime="2020">2020</time> по <time datetime="2022">2022</time> я любил проводить время в ритм-игре osu!, где нужно было одной рукой наводиться стилусом на кружочки и другой рукой жать две кнопки (всё это под отличную музыку). Как иногда бывает, я делал это очень неаккуратно: сильно прижимал запястья к столу, неправильно держал стилус (да, бывают разные хваты, и я выбрал один из самых неэргономичных). В итоге у меня начали болеть запястья, и я оставил игру. Потом боль почти полностью исчезла и достигла едва заметного плато, которое я не хочу ухудшать. Сейчас у меня есть сплит-клавиатура со встроенным трекболом и на крайние случаи вертикальная мышь. Эти девайсы сами по себе ставят запястья в куда более естественное положение, но, очевидно, чтобы сократить потенциальные разминки, рекомендуется делать разминки. Раз в час я обращаюсь к популярной в осу-сообществе <a href="https://youtu.be/H6y0D_8kRoU">видеоинструкции</a> от Tykato Fitness. Удачи мне; надеюсь, не заброшу эту историю. :')</p>
                 </section>
             </article>
             <article id="days-123L">
@@ -824,14 +831,14 @@ echo "=== Все картинки обработаны параллельно и
         <section id="snapshot-days">
             <h2>Снапшоты сайта по дням</h2>
             <ul>
-                <li><a href="/archive/2026/06_june/01/index">День 1</a></li>
-                <li><a href="archive/2026/06_june/02/index">День 2</a></li>
-                <li><a href="archive/2026/06_june/03/index">День 3</a></li>
-                <li><a href="archive/2026/06_june/12/index">День 4</a>, <time datetime="2026-06-12">12 июня 2026</time></li>
-                <li><a href="archive/2026/06_june/16/index">Дни 5—8</a>, <time datetime="2026-06-16">16 июня 2026</time></li>
-                <li><a href="archive/2026/06_june/17/index">День 9</a>, <time datetime="2026-06-16">17 июня 2026</time></li>
-                <li><a href="archive/2026/06_june/19/index">Дни 10—11</a>, <time datetime="2026-06-19">19 июня 2026</time></li>
-                <li><a href="archive/2026/07_july/20/index">День 13</a>, <time datetime="2026-07-20">20 июля 2026</time></li>
+                <li><a href="/archive/2026/06_june/01/">День 1</a></li>
+                <li><a href="archive/2026/06_june/02/">День 2</a></li>
+                <li><a href="archive/2026/06_june/03/">День 3</a></li>
+                <li><a href="archive/2026/06_june/12/">День 4</a>, <time datetime="2026-06-12">12 июня 2026</time></li>
+                <li><a href="archive/2026/06_june/16/">Дни 5—8</a>, <time datetime="2026-06-16">16 июня 2026</time></li>
+                <li><a href="archive/2026/06_june/17/">День 9</a>, <time datetime="2026-06-16">17 июня 2026</time></li>
+                <li><a href="archive/2026/06_june/19/">Дни 10—11</a>, <time datetime="2026-06-19">19 июня 2026</time></li>
+                <li><a href="archive/2026/07_july/20/">День 13</a>, <time datetime="2026-07-20">20 июля 2026</time></li>
             </ul>
         </section>
     </main>
