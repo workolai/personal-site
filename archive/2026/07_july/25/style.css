@@ -88,10 +88,8 @@ form {
 
 input,
 select,
-textarea,
-button {
+textarea {
     max-width: 100%;
-    font-size: inherit;
 }
 
 form p {
@@ -171,69 +169,4 @@ caption {
 p.experimental-css {
     color: indigo;
     font-size: 1.5625rem
-}
-
-#underline-random {
-    text-decoration: underline;
-}
-
-#overline-random {
-    text-decoration: overline;
-}
-
-#line-through-random {
-    text-decoration: line-through;
-}
-
-#left-align-random {
-    text-align: left;
-}
-
-#right-align-random {
-    text-align: right;
-}
-
-#centered-align-random {
-    text-align: center;
-}
-
-#text-indent-no {
-    text-indent: 0;
-}
-
-#text-indent-big {
-    text-indent: 15rem;
-}
-
-#uppercase-random {
-    text-transform:uppercase
-}
-
-#capitalized-random {
-    text-transform: capitalize;
-}
-
-#lowercase-random {
-    text-transform: lowercase;
-}
-
-#font-weight-900 {
-    font-weight: 900;
-}
-
-#font-weight-100 {
-    font-weight: 100;
-}
-
-#line-height-random {
-    line-height: 3;
-}
-
-#letter-spacing-random {
-    letter-spacing: 0.5rem;
-    border: 2px solid green;
-}
-
-#oblique-font-random {
-    font-style: oblique;
 }
