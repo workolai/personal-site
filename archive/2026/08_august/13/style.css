@@ -1,7 +1,7 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 19px;
-    background-color: papayawhip;
+    font-size: 1.1875rem;
+    background-color: aliceblue;
 }
 
 a {
@@ -33,7 +33,7 @@ pre {
 footer {
     text-align: center;
     padding: 20px 0 5px 0;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 #site-title {
@@ -42,10 +42,10 @@ footer {
 }
 
 .header-urls {
-    font-size: 17px;
+    font-size: 1.0625rem;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 1.875rem;
 }
 
 .container {
@@ -56,7 +56,7 @@ footer {
 }
 
 .navig {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 #snapshot-days ul li a {
@@ -65,7 +65,7 @@ footer {
 }
 
 article p {
-    text-align: justify;
+    text-align: left;
     text-indent: 1.8rem;
     hyphens: auto;
 }
@@ -76,12 +76,30 @@ article section ul p,
     text-indent: 0;
 }
 
+fieldset {
+    min-width: 0;
+    box-sizing: border-border-box;
+}
+
+form {
+    width: 100%;
+    max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+    max-width: 100%;
+    font-size: inherit;
+}
+
 form p {
     text-indent: 0;
 }
 
 .dialogue {
-    border: 2px solid #eee;
+    border: 2px solid #9d9d9d;
     padding: 30px 20px;
 }
 
@@ -90,7 +108,7 @@ tr,
 th,
 td,
 caption {
-    border: 1px solid #eee;
+    border: 1px solid #9d9d9d;
     border-collapse: collapse;
     padding: 0.5rem;
 }
@@ -104,6 +122,7 @@ caption {
     text-align: center;
     font-family: sans-serif;
 }
+
 
 .archive-nav_title,
 .archive-nav_desc {
@@ -126,12 +145,96 @@ caption {
 .archive-btn.disabled {
     color: #a0a0a0;
     text-decoration: none;
-    cursor: not-allowed;
     pointer-events: none;
     user-select: none;
 }
 
+.cool-box {
+    margin: 2rem;
+    padding: 1rem;
+    border: 5px double rgb(13, 167, 191);
+    outline: 4px solid rgb(29, 101, 108);
+    outline-offset: -10px;
+    font-size: 2.5rem;
+}
+
+.circle {
+    background-color: aquamarine;
+    border: 5px solid gold;
+    height: 200px;
+    width: 200px;
+    margin: 1rem auto;
+    border-radius: 100px;
+
+}
+
+
 p.experimental-css {
     color: indigo;
-    font-size: 25px
+    font-size: 1.5625rem
+}
+
+#underline-random {
+    text-decoration: underline;
+}
+
+#overline-random {
+    text-decoration: overline;
+}
+
+#line-through-random {
+    text-decoration: line-through;
+}
+
+#left-align-random {
+    text-align: left;
+}
+
+#right-align-random {
+    text-align: right;
+}
+
+#centered-align-random {
+    text-align: center;
+}
+
+#text-indent-no {
+    text-indent: 0;
+}
+
+#text-indent-big {
+    text-indent: 15rem;
+}
+
+#uppercase-random {
+    text-transform:uppercase
+}
+
+#capitalized-random {
+    text-transform: capitalize;
+}
+
+#lowercase-random {
+    text-transform: lowercase;
+}
+
+#font-weight-900 {
+    font-weight: 900;
+}
+
+#font-weight-100 {
+    font-weight: 100;
+}
+
+#line-height-random {
+    line-height: 3;
+}
+
+#letter-spacing-random {
+    letter-spacing: 0.5rem;
+    border: 2px solid green;
+}
+
+#oblique-font-random {
+    font-style: oblique;
 }

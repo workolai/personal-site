@@ -116,6 +116,7 @@ caption {
     color: #0066cc;
     text-decoration: none;
     transition: color 0.2s ease;
+    display: inline-block;
 }
 
 .archive-btn:hover {

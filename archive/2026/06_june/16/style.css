@@ -93,6 +93,7 @@ pre {
     margin: 0 10px;
     font-weight: 500;
     transition: color 0.2s ease;
+    display: inline-block;
 }
 
 .archive-btn:hover {

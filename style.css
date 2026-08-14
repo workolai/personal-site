@@ -10,9 +10,11 @@ a {
     transition: color 0.2s ease;
 }
 
-a:hover {
+a:hover,
+a:focus {
     color: #004499;
 }
+
 
 img {
     display: block;
@@ -134,6 +136,7 @@ caption {
     color: #0066cc;
     text-decoration: none;
     transition: color 0.2s ease;
+    display: inline-block;
 }
 
 .archive-btn:hover {
@@ -143,7 +146,6 @@ caption {
 .archive-btn.disabled {
     color: #a0a0a0;
     text-decoration: none;
-    cursor: not-allowed;
     pointer-events: none;
     user-select: none;
 }
@@ -165,6 +167,10 @@ caption {
     margin: 1rem auto;
     border-radius: 100px;
 
+}
+
+.mono-font {
+    font-family: monospace;
 }
 
 
