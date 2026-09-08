@@ -80,7 +80,7 @@ article section ul p,
 
 fieldset {
     min-width: 0;
-    box-sizing: border-border-box;
+    box-sizing: border-box;
 }
 
 form {
@@ -242,4 +242,34 @@ p.experimental-css {
 
 #oblique-font-random {
     font-style: oblique;
+}
+
+#ordered-list1 {
+    list-style-type:decimal-leading-zero;
+}
+
+#ordered-list2 {
+    list-style-type: georgian;
+}
+
+#ordered-list3 {
+    list-style-type: disc;
+}
+
+#unordered-list1 {
+    list-style-type: square;
+}
+
+#unordered-list2 {
+    list-style-type: square;
+    list-style-position: inside;
+    text-align: center;
+}
+
+#unordered-list2 li:nth-child(2) {
+    color: red;
+}
+
+#unordered-list2 :nth-child(3)::marker {
+    color: blue;
 }
