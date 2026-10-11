@@ -273,3 +273,47 @@ p.experimental-css {
 #unordered-list2 :nth-child(3)::marker {
     color: blue;
 }
+
+#cool-test-menu {
+    border: 2px #333 solid;
+    border-radius: 20px;
+    text-align: center;
+    margin: 0 auto 1rem;
+    max-width: 600px;
+    font-size: 2rem;
+}
+
+#cool-test-menu h5 {
+    padding: 1rem;
+    background-color: gold;
+    margin: 0;
+    border-radius: 20px 20px 0 0;
+}
+
+#cool-test-menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cool-test-menu li {
+    border-top: 1px solid #333;
+}
+
+#cool-test-menu li a,
+#cool-test-menu li a:visited {
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+
+#cool-test-menu li a:hover,
+#cool-test-menu li a:focus {
+    background-color: #333;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+#cool-test-menu li:last-child a {
+    border-radius: 0 0 20px 20px;
+}
