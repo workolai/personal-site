@@ -179,6 +179,28 @@ p.experimental-css {
     font-size: 1.5625rem
 }
 
+.interesing-test-1 {
+    display: flow-root;
+}
+
+.block-test {
+    width: 15vw;
+    height: 15vw;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+.block-test.left {
+    float: left;
+    margin-right: 2rem
+}
+
+.block-test.right {
+    float: right;
+    margin-left: 2rem;
+}
+
 #underline-random {
     text-decoration: underline;
 }
@@ -212,7 +234,7 @@ p.experimental-css {
 }
 
 #uppercase-random {
-    text-transform:uppercase
+    text-transform: uppercase
 }
 
 #capitalized-random {
@@ -245,7 +267,7 @@ p.experimental-css {
 }
 
 #ordered-list1 {
-    list-style-type:decimal-leading-zero;
+    list-style-type: decimal-leading-zero;
 }
 
 #ordered-list2 {
@@ -290,7 +312,7 @@ p.experimental-css {
     border-radius: 20px 20px 0 0;
 }
 
-#cool-test-menu ul{
+#cool-test-menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
