@@ -184,8 +184,8 @@ p.experimental-css {
 }
 
 .block-test {
-    width: 15vw;
-    height: 15vw;
+    width: 125px;
+    height: 125px;
     background-color: black;
     color: white;
     padding: 1rem;
@@ -199,6 +199,35 @@ p.experimental-css {
 .block-test.right {
     float: right;
     margin-left: 2rem;
+}
+
+.columns-test {
+    columns: 2 100px;
+    /* column-count: 2;
+    column-width: 100px; */
+    column-rule: 3px solid #333;
+    column-gap: 3rem;
+}
+
+.columns-test p {
+    text-indent: 0;
+    text-align: justify;
+}
+
+.columns-test p:first-of-type {
+    margin-top: 0;
+}
+
+.columns-test h5 {
+    background-color: #333;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.25rem;
+    text-align: center;
+    margin: 0;
+    hyphens: auto;
+    break-inside: avoid;
 }
 
 #underline-random {
